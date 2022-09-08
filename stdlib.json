@@ -1,0 +1,39 @@
+{
+  "name": "creepertown/unocardgame",
+  "timeout": 10000,
+  "connector": false,
+  "events": {
+    "functions/events/discord/command/start-game.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "start-game"
+      }
+    },
+    "functions/events/discord/command/info.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "info"
+      }
+    },
+    "functions/events/discord/message/button/interaction.js": {
+      "name": "discord.message.button.interaction",
+      "subtype": {
+        "custom_id": "accept-uno-invite"
+      }
+    },
+    "functions/events/scheduler/daily.js": {
+      "name": "scheduler.daily",
+      "subtype": {
+        "time": "00:00 (12:00am)",
+        "timezone": "Etc — UTC, ETC (+00:00)"
+      }
+    },
+    "functions/events/discord/command.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "tarot"
+      }
+    }
+  },
+  "env": []
+}
