@@ -7,7 +7,7 @@ const { unoCards } = require('../../../../../helpers/others/uno_cards.json');
 const { shuffle, gameStartFromDM } = require('../../../../../helpers/others/functions.js');
 const http = require('../../../../../helpers/http/functions.js');
 
-let { user, token, message, channel_id, guild_id } = context.params.event
+let { user, token, message, channel_id } = context.params.event
 
 // ACK the event
 await responses.create(token, 'DEFERRED_CHANNEL_MESSAGE_WITH_SOURCE');
@@ -28,6 +28,8 @@ catch (errorGettingDetails) {
   return await responses.update(token, 'There was an error getting the details of the game.')
 }
 
+let guild_id = playerlistGuildID
+
 // if the game was already accepted, return
 if (message.embeds[0].fields[4].value == '✅') {
   return await responses.update(token, 'The game was already accepted.')
@@ -36,7 +38,7 @@ if (message.embeds[0].fields[4].value == '✅') {
 let PLmessage = await messages.retrieve(playerlistChannelID, playerlistMessageID), fields = PLmessage.embeds[0].fields
 
 // find the game channel from the PLmessage
-let gameChannel = PLmessage.description.match(/<#\d+>/gi)[0].match(/\d+/gi)[0]
+let gameChannel = PLmessage.embeds[0].description.match(/<#\d+>/gi)[0].match(/\d+/gi)[0]
 
 /* It's checking to see if the user has been invited to a game. If they have, it will replace the ❌
 with a ✅. If they haven't, it will send a message saying that they haven't been invited to a game. */
@@ -125,20 +127,21 @@ let allAccepted = true;
 await responses.update(token, `You have succesfully accepted the game invite! As you were the last person to accept the game invite, the game will start shortly.`)
 
 // start the game
-let game = await kv.get(`unoGame-${guild_id}-${gameChannel}`)
+let game = await kv.get(`unoGame-${guild_id}-${gameChannel}`);
 if (!game) {
-  return console.error(`There was an error getting the game data.` + `\n` + `Guild ID: ${playerlistGuildID}` + `\n` + `Channel ID: ${playerlistChannelID}` + `\n` + `Message ID: ${playerlistMessageID}` + `\n` + game)
-} else {
-  let auth = context.service.hash
-  let headers = {}
-  let params = {
-    event: context.params.event,
-    game: game,
-    allAccepted: allAccepted,
-  }
-  let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start`, auth, headers, params)
-  return startGame
+  return console.error(`There was an error getting the game data.` + `\n` + `Guild ID: ${guild_id}` + `\n` + `Channel ID: ${gameChannel}` + `\n` + `Message ID: ${playerlistMessageID}`)
+} 
+
+console.log(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start`)
+let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start/`, '', {auth: context.service.hash}, {event: context.params.event, game: game, allAccepted: allAccepted,})
+console.log(startGame)
+
+
+// startGame will be either true or false, depending on whether or not the game started successfully. If it didn't, it will send a message to the game channel saying that the game failed to start.
+if (startGame == false) {
+  return await messages.create(gameChannel, `The game failed to start. Please try again.`)
 }
+
 
  /*
  All code after here should be gone (?) because it will be moved to the new file.

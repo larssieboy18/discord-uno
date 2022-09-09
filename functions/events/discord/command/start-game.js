@@ -14,6 +14,12 @@ let { event } = context.params,
 /* Getting the channel from the options. */
 let channel = (data.options.find((option) => option.name == `channel`)).value;
 
+// // check if there already is a game in progress inside the same channel
+// let gameInProgress = await kv.get(`unoGame-${guild_id}-${channel}`, false);
+// if (gameInProgress) {
+//   return await responses.update(token, `There already is a game in progress in <#${channel}>. Only one game can be played in a channel at a time.`);
+// }
+
 let startMessage = await responses.retrieve(token);
 
 let sleep = functions.sleep;
@@ -215,7 +221,7 @@ await kv.set(`unoGame-${guild_id}-${channel}`, {
   startDate: `${new Date(received_at)}`,
   expiryDate: `${time}`,
   players: allPlayers,
-}, expiry);
+});
+let kvpair = await kv.get(`unoGame-${guild_id}-${channel}`);
 
-// let kvpair = await kv.get(`unoGame-${guild_id}-${channel}`);
-// console.log(kvpair)
+console.log(kvpair);

@@ -17,6 +17,7 @@ module.exports = {
       body: body
     });
   },
+  /*-----*/
   del: async (url, authorization = '', headers = {}, query = {}) => {
     return await lib.http.request['@1.1.7'].del({
       url: url,
