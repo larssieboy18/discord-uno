@@ -44,7 +44,7 @@ for (let i = 0; i < fields.length; i++) {
     break
   }
 }
-if (matchCount = 0) {
+if (matchCount < 1) {
   return await responses.update(token, `Unable to find a pending game that you were invited to. The button will only work if you have been recently invited and have not accepted yet.`)
 }
 
