@@ -38,7 +38,7 @@ module.exports = {
       url: url,
       authorization: authorization,
       headers: headers,
-      params: query,
+      params: params,
     });
   },
   post: async (url, authorization = '', headers = {}, params = {}) => {
@@ -46,7 +46,7 @@ module.exports = {
       url: url,
       authorization: authorization,
       headers: headers,
-      params: query,
+      params: params,
     });
   },
 }
