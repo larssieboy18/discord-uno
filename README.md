@@ -5,5 +5,5 @@
 
 # Contributors
 <a href="https://github.com/larssieboy18/discord-uno/graphs/contributors">
-  <img src="https://github.com/larssieboy18/discord-uno" />
+  <img src="https://contrib.rocks/image?repo=larssieboy18/discord-uno" />
 </a>
