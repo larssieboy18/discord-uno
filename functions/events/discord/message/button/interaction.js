@@ -136,7 +136,6 @@ console.log(`https://${context.service.environment}--${context.service.path[1]}.
 let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start/`, '', {auth: context.service.hash}, {event: context.params.event, game: game, allAccepted: allAccepted,})
 console.log(startGame)
 
-
 // startGame will be either true or false, depending on whether or not the game started successfully. If it didn't, it will send a message to the game channel saying that the game failed to start.
 if (startGame == false) {
   return await messages.create(gameChannel, `The game failed to start. Please try again.`)
