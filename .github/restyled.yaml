@@ -1,0 +1,29 @@
+enabled: true
+
+exclude:
+- "**/env.json"
+- "**/package.json"
+- "**/.github/workflows/**"
+
+changed_paths:
+  maximum: 1000
+  outcome: error
+
+auto: false
+
+pull_requests: true
+
+statuses:
+  differences: true     # Red when style differences are found
+  no_differences: true  # Green when no differences are found
+  error: true           # Red if we encounter errors restyling
+
+request_review: author
+
+labels:
+  - restyle
+
+restylers_version: stable
+
+restylers:
+  - "*"
