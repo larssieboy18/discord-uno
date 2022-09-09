@@ -7,7 +7,7 @@ const { unoCards } = require('../../../../../helpers/others/uno_cards.json');
 const { shuffle, gameStartFromDM } = require('../../../../../helpers/others/functions.js');
 const http = require('../../../../../helpers/http/functions.js');
 
-let { user, token, message, channel_id } = context.params.event
+let { user, token, message, channel_id, guild_id } = context.params.event
 
 // ACK the event
 await responses.create(token, 'DEFERRED_CHANNEL_MESSAGE_WITH_SOURCE');
@@ -34,6 +34,9 @@ if (message.embeds[0].fields[4].value == '✅') {
 }
 
 let PLmessage = await messages.retrieve(playerlistChannelID, playerlistMessageID), fields = PLmessage.embeds[0].fields
+
+// find the game channel from the PLmessage
+let gameChannel = PLmessage.description.match(/<#\d+>/gi)[0].match(/\d+/gi)[0]
 
 /* It's checking to see if the user has been invited to a game. If they have, it will replace the ❌
 with a ✅. If they haven't, it will send a message saying that they haven't been invited to a game. */
@@ -122,15 +125,19 @@ let allAccepted = true;
 await responses.update(token, `You have succesfully accepted the game invite! As you were the last person to accept the game invite, the game will start shortly.`)
 
 // start the game
-let game = await kv.get(`uno_${playerlistGuildID}_${playerlistChannelID}_${playerlistMessageID}`)
+let game = await kv.get(`unoGame-${guild_id}-${gameChannel}`)
 if (!game) {
   return console.error(`There was an error getting the game data.` + `\n` + `Guild ID: ${playerlistGuildID}` + `\n` + `Channel ID: ${playerlistChannelID}` + `\n` + `Message ID: ${playerlistMessageID}` + `\n` + game)
 } else {
-let auth = context.service.uuid
-let headers = {}
-let params = context.params.event
- let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start`, auth, headers, params)
- return startGame
+  let auth = context.service.hash
+  let headers = {}
+  let params = {
+    event: context.params.event,
+    game: game,
+    allAccepted: allAccepted,
+  }
+  let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start`, auth, headers, params)
+  return startGame
 }
 
  /*

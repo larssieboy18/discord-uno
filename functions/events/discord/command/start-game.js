@@ -182,7 +182,7 @@ invited to your game:', the color 0x2f3136 and the fields 'fields'.
 embed = [
   {
     title: 'UNO playerlist',
-    description: `All players have received an invite! If not everyone accepts <t:${Math.floor(time / 1000)}:R>, the game will be cancelled. \nWhen a player accepts, they will be added to the game and a checkmark will appear in the list below. \nIf not everyone accepts, the game will start with the players that accepted.`,
+    description: `All players have received an invite for a game of UNO in <#${channel}>! If not everyone accepts <t:${Math.floor(time / 1000)}:R>, the game will be cancelled. \nWhen a player accepts, they will be added to the game and a checkmark will appear in the list below. \nIf not everyone accepts, the game will start with the players that accepted.`,
     color: 0x2f3136,
     fields: fields,
   }
