@@ -126,61 +126,63 @@ let game = await kv.get(`uno_${playerlistGuildID}_${playerlistChannelID}_${playe
 if (!game) {
   return console.error(`There was an error getting the game data.` + `\n` + `Guild ID: ${playerlistGuildID}` + `\n` + `Channel ID: ${playerlistChannelID}` + `\n` + `Message ID: ${playerlistMessageID}` + `\n` + game)
 } else {
+let auth = context.service.uuid
+let headers = {}
+let params = context.params.event
  let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start`, auth, headers, params)
+ return startGame
 }
 
  /*
  All code after here should be gone (?) because it will be moved to the new file.
  */ 
-let players = game.players, playerIDs = Object.keys(players), playerCount = playerIDs.length
+// let players = game.players, playerIDs = Object.keys(players), playerCount = playerIDs.length
 
-// shuffle the deck
-let deck = shuffle(uno_deck)
+// // shuffle the deck
+// let deck = shuffle(uno_deck)
 
-// deal the cards
-let hands = {}
-for (let i = 0; i < playerCount; i++) {
-  hands[playerIDs[i]] = []
-  for (let j = 0; j < 7; j++) {
-    hands[playerIDs[i]].push(deck.pop())
-  }
-}
+// // deal the cards
+// let hands = {}
+// for (let i = 0; i < playerCount; i++) {
+//   hands[playerIDs[i]] = []
+//   for (let j = 0; j < 7; j++) {
+//     hands[playerIDs[i]].push(deck.pop())
+//   }
+// }
 
-// get the first card
-let firstCard = deck.pop()
+// // get the first card
+// let firstCard = deck.pop()
 
-// get the first player
-let firstPlayer = playerIDs[Math.floor(Math.random() * playerCount)]
+// // get the first player
+// let firstPlayer = playerIDs[Math.floor(Math.random() * playerCount)]
 
-// set the game data
-game = {
-  players: players,
-  playerIDs: playerIDs,
-  playerCount: playerCount,
-  deck: deck,
-  hands: hands,
-  firstCard: firstCard,
-  firstPlayer: firstPlayer,
-  currentPlayer: firstPlayer,
-  direction: 1,
-  lastCard: firstCard,
-  lastPlayer: firstPlayer,
-  lastAction: 'draw',
-  lastActionPlayer: firstPlayer,
-  lastActionCount: 0,
-  lastActionCard: null,
-  lastActionCards: [],
-  lastActionColor: null,
-  lastActionWild: false,
-  lastActionDraw: false,
-  lastActionSkip: false,
-  lastActionReverse: false,
-  lastActionPlusAnyNumber: false,
-  lastActionPlusTwo: false,
-  lastActionPlusFour: false,
-}
-
-
+// // set the game data
+// game = {
+//   players: players,
+//   playerIDs: playerIDs,
+//   playerCount: playerCount,
+//   deck: deck,
+//   hands: hands,
+//   firstCard: firstCard,
+//   firstPlayer: firstPlayer,
+//   currentPlayer: firstPlayer,
+//   direction: 1,
+//   lastCard: firstCard,
+//   lastPlayer: firstPlayer,
+//   lastAction: 'draw',
+//   lastActionPlayer: firstPlayer,
+//   lastActionCount: 0,
+//   lastActionCard: null,
+//   lastActionCards: [],
+//   lastActionColor: null,
+//   lastActionWild: false,
+//   lastActionDraw: false,
+//   lastActionSkip: false,
+//   lastActionReverse: false,
+//   lastActionPlusAnyNumber: false,
+//   lastActionPlusTwo: false,
+//   lastActionPlusFour: false,
+// }
 
 
 
@@ -188,19 +190,21 @@ game = {
 
 
 
-//await messages.create('976400262677803018', `${deck}`)
-
-await gameStartFromDM(context.params.event, playerlistGuildID, playerlistChannelID, playerlistMessageID, allAccepted, PLmessage)
 
 
+// //await messages.create('976400262677803018', `${deck}`)
 
-let cardData = [];
-let cardDisplay = '';
-for (let j = 0; j < 20; j++) {
-  cardData.push(unoCards.find((card) => card.name == deck[j]));
-  cardDisplay =
-    cardDisplay +
-    unoCards.find((card) => card.name == deck[j]).emoji;
-}
+// await gameStartFromDM(context.params.event, playerlistGuildID, playerlistChannelID, playerlistMessageID, allAccepted, PLmessage)
 
-await messages.create('976400262677803018', `${cardDisplay}`)
+
+
+// let cardData = [];
+// let cardDisplay = '';
+// for (let j = 0; j < 20; j++) {
+//   cardData.push(unoCards.find((card) => card.name == deck[j]));
+//   cardDisplay =
+//     cardDisplay +
+//     unoCards.find((card) => card.name == deck[j]).emoji;
+// }
+
+// await messages.create('976400262677803018', `${cardDisplay}`)
