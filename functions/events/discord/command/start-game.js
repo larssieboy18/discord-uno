@@ -1,8 +1,12 @@
 // authenticates you with the API standard library
-const lib = require('lib')({ token: process.env.STDLIB_SECRET_TOKEN });
+const lib = require('lib')({ token: process.env.STDLIB_SECRET_TOKEN }); // need to get rid of all lib references and use the helper files instead
 const responses = require('../../../../helpers/interactions/responses.js');
 const kv = require('../../../../helpers/kv/functions.js');
 const guilds = require('../../../../helpers/guilds/functions.js');
+const functions = require('../../../../helpers/others/functions.js');
+
+// ACK the event
+await responses.create(context.params.event.token);
 
 let { event } = context.params,
   { member, data, token, guild_id, received_at } = event;
@@ -10,36 +14,27 @@ let { event } = context.params,
 /* Getting the channel from the options. */
 let channel = (data.options.find((option) => option.name == `channel`)).value;
 
-// ACK the events
-await lib.discord.interactions['@1.0.1'].responses.create({
-  token: `${context.params.event.token}`,
-  response_type: 'DEFERRED_CHANNEL_MESSAGE_WITH_SOURCE',
-});
-
 let startMessage = await responses.retrieve(token);
 
-/* sleep() returns a promise that resolves after a given number of milliseconds.*/
-function sleep(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+let sleep = functions.sleep;
+
+/* create a list with players - person running the command is player1 and is automatically added to the list */
+let playerlist = [`${member.user.id}`]
+
+/* Checking if there are more than 8 players. If there are, it will return a message saying that you
+can only play UNO with up to 8 players. If there are not, it will continue the rest of the file. 
+Cannot be bigger than 9, as the options also include the channel that the game starts in. */
+if (data.options.length > 9) {
+  console.error(`There shouldn't be more than 8 players`);
+  return await lib.discord.interactions['@1.0.1'].responses.update({
+    token: `${token}`,
+    content: `You can only play UNO with up to 8 players.`,
+    response_type: 'CHANNEL_MESSAGE_WITH_SOURCE',
+  });
 }
 
-/* Add check to make sure only 1 game starts per channel*/
-
-/* create a list with players
-person running the command is player1
-*/
-let playerlist = [`${member.user.id}`]
+// create playerlist
 for (let i = 2; i <= 8; i++) {
-  /* Checking if there are more than 8 players. If there are, it will return a message saying that you
-  can only play UNO with up to 8 players. If there are not, it will continue the rest of the file. */
-  if (i == 9) {
-    console.error(`There shouldn't be more than 8 players`);
-    return await lib.discord.interactions['@1.0.1'].responses.update({
-      token: `${token}`,
-      content: `You can only play UNO with up to 8 players.`,
-      response_type: 'CHANNEL_MESSAGE_WITH_SOURCE',
-    });
-  }
   let playerID =
     data.options.find((option) => option.name == `player${i}`) || null;
   if (playerID) {

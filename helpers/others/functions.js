@@ -36,6 +36,10 @@ module.exports = {
       return false;
     }
   },
+  /* A function that waits for 1 second before continuing. */
+  sleep: async (ms) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  },
   gameStartFromDM: async (event, guild_id, channel_id, message_id, allAccepted, PLmessage) => {
     let gameDeck = await shuffle(uno_deck);
     let kvdata = await kv.get(`unoGame-${guild_id}-${channel_id}`)
