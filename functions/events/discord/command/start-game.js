@@ -14,6 +14,12 @@ let { event } = context.params,
 /* Getting the channel from the options. */
 let channel = (data.options.find((option) => option.name == `channel`)).value;
 
+// // check if there already is a game in progress inside the same channel
+// let gameInProgress = await kv.get(`unoGame-${guild_id}-${channel}`, false);
+// if (gameInProgress) {
+//   return await responses.update(token, `There already is a game in progress in <#${channel}>. Only one game can be played in a channel at a time.`);
+// }
+
 let startMessage = await responses.retrieve(token);
 
 let sleep = functions.sleep;
@@ -182,7 +188,7 @@ invited to your game:', the color 0x2f3136 and the fields 'fields'.
 embed = [
   {
     title: 'UNO playerlist',
-    description: `All players have received an invite! If not everyone accepts <t:${Math.floor(time / 1000)}:R>, the game will be cancelled. \nWhen a player accepts, they will be added to the game and a checkmark will appear in the list below. \nIf not everyone accepts, the game will start with the players that accepted.`,
+    description: `All players have received an invite for a game of UNO in <#${channel}>! If not everyone accepts <t:${Math.floor(time / 1000)}:R>, the game will be cancelled. \nWhen a player accepts, they will be added to the game and a checkmark will appear in the list below. \nIf not everyone accepts, the game will start with the players that accepted.`,
     color: 0x2f3136,
     fields: fields,
   }
@@ -215,7 +221,7 @@ await kv.set(`unoGame-${guild_id}-${channel}`, {
   startDate: `${new Date(received_at)}`,
   expiryDate: `${time}`,
   players: allPlayers,
-}, expiry);
+});
+let kvpair = await kv.get(`unoGame-${guild_id}-${channel}`);
 
-// let kvpair = await kv.get(`unoGame-${guild_id}-${channel}`);
-// console.log(kvpair)
+console.log(kvpair);
