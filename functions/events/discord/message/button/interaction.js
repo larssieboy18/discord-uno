@@ -5,6 +5,7 @@ const kv = require('../../../../../helpers/kv/functions.js');
 const uno_deck = require('../../../../../helpers/others/uno_deck.json');
 const { unoCards } = require('../../../../../helpers/others/uno_cards.json');
 const { shuffle, gameStartFromDM } = require('../../../../../helpers/others/functions.js');
+const http = require('../../../../../helpers/http/functions.js');
 
 let { user, token, message, channel_id } = context.params.event
 
@@ -123,9 +124,14 @@ await responses.update(token, `You have succesfully accepted the game invite! As
 // start the game
 let game = await kv.get(`uno_${playerlistGuildID}_${playerlistChannelID}_${playerlistMessageID}`)
 if (!game) {
-  return await responses.update(token, `There was an error getting the game data. Please try again.`)
+  return console.error(`There was an error getting the game data.` + `\n` + `Guild ID: ${playerlistGuildID}` + `\n` + `Channel ID: ${playerlistChannelID}` + `\n` + `Message ID: ${playerlistMessageID}` + `\n` + game)
+} else {
+ let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start`, auth, headers, params)
 }
 
+ /*
+ All code after here should be gone (?) because it will be moved to the new file.
+ */ 
 let players = game.players, playerIDs = Object.keys(players), playerCount = playerIDs.length
 
 // shuffle the deck

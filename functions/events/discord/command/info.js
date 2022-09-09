@@ -1,5 +1,6 @@
 /* This is importing the responses.js file from the helpers/interactions folder. */
 const responses = require('../../../../helpers/interactions/responses.js');
+console.log(context)
 
 // ACK the event
 await responses.create(context.params.event.token);
