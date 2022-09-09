@@ -8,14 +8,14 @@ module.exports = {
       type: type,
     });
   },
-  update: async (thread_id, name = '', archive = 1440, locked = true, slowmode = 0, archive = true) => {
+  update: async (thread_id, name = '', archive = 1440, locked = true, slowmode = 0, archived = false) => {
     return await lib.discord.channels['@0.3.2'].threads.update({
       thread_id: thread_id,
       name: name,
       auto_archive_duration: archive,
       locked: locked,
       rate_limit_per_user: slowmode,
-      archived: archive,
+      archived: archived,
     });
   },
   join: async (thread) => {
