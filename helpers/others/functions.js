@@ -87,10 +87,12 @@ module.exports = {
     // code here
 
   },
-  updateGameData: async (guild, channel, message, changes) => {
-    let kvdata = await kv.get(`unoGame-${guild}-${channel}`)
-
-  },
+  // updateGameData: async (guild, channel, message, changes) => {
+  //   let currentKvData = await kv.get(`unoGame-${guild}-${channel}`)
+  //   let newKvData = Object.assign(currentKvData, changes)
+  //   await kv.set(`unoGame-${guild}-${channel}`, newKvData)
+  //   return newKvData
+  // },
   allAccepted: async (some, variables, need, to, be, added, here) => {
     // code here
   },
