@@ -4,6 +4,7 @@ const responses = require('../../../../helpers/interactions/responses.js');
 const kv = require('../../../../helpers/kv/functions.js');
 const guilds = require('../../../../helpers/guilds/functions.js');
 const functions = require('../../../../helpers/others/functions.js');
+const messages = require ('../../../../helpers/channels/messages/functions.js');
 
 // ACK the event
 await responses.create(context.params.event.token);
@@ -196,6 +197,9 @@ embed = [
 
 /* Sending a message to the channel where the command was used. */
 await responses.update(token, '', embed, [], 'CHANNEL_MESSAGE_WITH_SOURCE');
+
+/* Sending a message to the channel where the game will be played. */
+await messages.create(channel, '', embed, []);
 
 startMessage = await responses.retrieve(token);
 
