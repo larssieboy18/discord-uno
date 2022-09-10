@@ -4,12 +4,6 @@
   "publish": false,
   "dependencies": {
     "lib": "latest",
-    "js-base64": "^3.7.2",
-    "uno-engine-plus": "^0.0.1",
-    "canvas": "^2.10.0",
-    "@canvas-fonts/comic-sans-ms": "^1.0.4",
-    "jimp": "^0.16.1",
-    "@canvas-fonts/arial-bold": "^1.0.4",
-    "merge-images": "^2.0.0"
+    "js-base64": "^3.7.2"
   }
 }
