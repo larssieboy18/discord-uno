@@ -225,7 +225,8 @@ await kv.set(`unoGame-${guild_id}-${channel}`, {
   startDate: `${new Date(received_at)}`,
   expiryDate: `${time}`,
   players: allPlayers,
-});
+  gameChannel: channel,
+}, expiry);
 let kvpair = await kv.get(`unoGame-${guild_id}-${channel}`);
 
 console.log(kvpair);

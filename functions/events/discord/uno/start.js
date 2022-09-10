@@ -2,27 +2,45 @@ try{
 const uno_deck = require('../../../../helpers/others/uno_deck.json');
 const { unoCards } = require('../../../../helpers/others/uno_cards.json');
 const { shuffle } = require('../../../../helpers/others/functions.js');
+const kv = require('../../../../helpers/kv/functions.js');
 
 // debugging
 console.log(context)
 
-// create deck
+// get channel id from context (this is the channel where the game is being played)
+let {gameChannel} = context.params.game
+
+// get playerlist from context (array of player objects)
+let playerlist = context.params.game.players
+
+// create starting deck
 let startingDeck = shuffle(uno_deck);
 
 // create draw pile
 let drawPile = [];
 
-// create player hands
-let playerHands = {};
+ // // create player hands
+ // let playerHands = {};
 
 // deal 7 cards to each player
-for (let i = 0; i < playerlist.length; i++) {
-  let player = playerlist[i];
-  playerHands[player] = [];
-  for (let j = 0; j < 7; j++) {
-    playerHands[player].push(startingDeck.pop());
+let  playerHands = playerlist.map(player => {
+  let hand = [];
+  for (let i = 0; i < 7; i++) {
+    hand.push(startingDeck.pop());
   }
-}
+  return {
+    id: player.id,
+    hand: hand
+  }
+})
+
+// for (let i = 0; i < playerlist.length; i++) {
+//   let player = playerlist[i];
+//   playerHands[player] = [];
+//   for (let j = 0; j < 7; j++) {
+//     playerHands[player].push(startingDeck.pop());
+//   }
+// }
 
 // create current deck
 let currentDeck = startingDeck;
@@ -38,6 +56,7 @@ discardPile.push(startingDeck.pop());
 
 // create game object
 let game = {
+  channel: gameChannel,
   playerlist: playerlist,
   playerHands: playerHands,
   drawPile: drawPile,
@@ -49,19 +68,24 @@ let game = {
   wildColor: null, // color change because of wildcard
   colorChangeBy: null, // player who changed the color
   wildDrawFour: 0, // +4
-  uno: false,
-  unoCalled: false,
+  playersWithUno: [],
+  unoCalled: [],
   unoCalledBy: null,
   unoMissedCalled: false,
   unoMissedCalledBy: null,
-  unoMissedCalledOn: null,
-}
+};
 
-return `succesfully started the game`
+// debugging
+console.log(game)
+
+await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
+
+// did an error occur?
+return false
 } catch (errorStartingGame) {
   console.error(errorStartingGame)
-  return `There was an error starting the game. If this keeps happening, please report this on our Github page https://github.com/larssieboy18/discord-uno/issues and include the following error message: \`${errorStartingGame}\``
-
+  return errorStartingGame
+}
 
 
 return `Succesful or not?`
@@ -124,14 +148,6 @@ return `Succesful or not?`
 //   lastActionPlusTwo: false,
 //   lastActionPlusFour: false,
 // }
-
-
-
-
-
-
-
-
 
 // //await messages.create('976400262677803018', `${deck}`)
 
