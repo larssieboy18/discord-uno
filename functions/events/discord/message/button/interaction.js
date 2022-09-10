@@ -116,13 +116,14 @@ fields = PLmessage.embeds[0].fields
 message to the user who accepted the game saying that the game will start shortly. If they haven't,
 it will send a message to the user who accepted the game saying that they will be notified when the
 game starts. */
+let allAccepted
 for (let i = 0; i < fields.length; i++) {
   if (fields[i].name.includes('❌')) {
-    let allAccepted = false;
+    allAccepted = false;
     return await responses.update(token, `You have succesfully accepted the game invite! You will be notified when the game starts.`)
   }
 }
-let allAccepted = true;
+allAccepted = true;
 
 await responses.update(token, `You have succesfully accepted the game invite! As you were the last person to accept the game invite, the game will start shortly.`)
 
