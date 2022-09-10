@@ -88,10 +88,6 @@ return false
 }
 
 
-return `Succesful or not?`
-
-
-
 
 
 
