@@ -1,4 +1,4 @@
-try{
+try {
 const uno_deck = require('../../../../helpers/others/uno_deck.json');
 const { unoCards } = require('../../../../helpers/others/uno_cards.json');
 const { shuffle } = require('../../../../helpers/others/functions.js');
@@ -68,7 +68,7 @@ let game = {
   wildColor: null, // color change because of wildcard
   colorChangeBy: null, // player who changed the color
   wildDrawFour: 0, // +4
-  playersWithUno: [],
+  playersWithUno: [], // array of player ids that have uno
   unoCalled: [], // array of player ids that called uno
   unoMissedCalled: false, // did someone notice that a player missed calling uno?
   unoMissedCalledBy: null, // player who noticed that someone missed calling uno
