@@ -35,5 +35,10 @@
       }
     }
   },
-  "env": []
+  "env": [
+    {
+      "name": "botID",
+      "description": "The ID of your Discord bot that you use for UNO"
+    }
+  ]
 }
