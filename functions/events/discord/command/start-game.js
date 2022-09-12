@@ -186,6 +186,7 @@ time.setMinutes(time.getMinutes() + 10);
 /* Creating an embed with the title 'UNO playerlist', the description 'The following players have been
 invited to your game:', the color 0x2f3136 and the fields 'fields'. 
 */
+
 embed = [
   {
     title: 'UNO playerlist',

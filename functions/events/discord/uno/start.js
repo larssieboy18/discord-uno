@@ -56,12 +56,12 @@ discardPile.push(startingDeck.pop());
 
 // create game object
 let game = {
-  channel: gameChannel,
-  playerlist: playerlist,
-  playerHands: playerHands,
-  drawPile: drawPile,
-  discardPile: discardPile,
-  currentPlayer: startingPlayer,
+  channel: gameChannel, // channel where the game is being played
+  playerlist: playerlist, // array of player objects
+  playerHands: playerHands, // object with player ids as keys and arrays of cards as values
+  drawPile: drawPile, // draw pile is empty at the start of the game
+  discardPile: discardPile, // discard pile has one card at the start of the game
+  currentPlayer: startingPlayer, // player object of the player that starts the game
   direction: 1, // reverse
   drawTwo: 0, // +2
   skip: 0, // skip
@@ -69,14 +69,14 @@ let game = {
   colorChangeBy: null, // player who changed the color
   wildDrawFour: 0, // +4
   playersWithUno: [],
-  unoCalled: [],
-  unoCalledBy: null,
-  unoMissedCalled: false,
-  unoMissedCalledBy: null,
+  unoCalled: [], // array of player ids that called uno
+  unoMissedCalled: false, // did someone notice that a player missed calling uno?
+  unoMissedCalledBy: null, // player who noticed that someone missed calling uno
 };
 
 // debugging
 console.log(game)
+console.log(game.playerHands)
 
 await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
 
