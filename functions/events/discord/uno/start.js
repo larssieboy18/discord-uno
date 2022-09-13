@@ -6,7 +6,7 @@ const kv = require('../../../../helpers/kv/functions.js');
 const messages = require('../../../../helpers/channels/messages/functions.js');
 
 // debugging
-console.log(context)
+// console.log(context)
 
 // get channel id from context (this is the channel where the game is being played)
 let {gameChannel} = context.params.game
@@ -38,22 +38,18 @@ let playerHands = [];
 //   }
 // })
 for (let i = 0; i < playerlist.length; i++) {
-  let player = playerlist[i];
-  playerHands[player] = [];
-  playerHands[player].unshift(startingDeck.slice(0, 7));
+  playerHands[i] = startingDeck.slice(0, 7);
 }
 
-// create current deck
-let currentDeck = startingDeck;
 
 // create discard pile
-let discardPile = [currentDeck.pop()];
-
-// pick a random player from playerlist that starts the game
-let startingPlayer = playerlist[Math.floor(Math.random() * playerlist.length)];
+let discardPile = [];
 
 // add first card to discard pile
 discardPile.push(startingDeck.pop());
+
+// pick a random player from playerlist that starts the game
+let startingPlayer = playerlist[Math.floor(Math.random() * playerlist.length)];
 
 // create game object
 let game = {
