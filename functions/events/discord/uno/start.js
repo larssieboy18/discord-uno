@@ -115,7 +115,7 @@ let startingMessage = await messages.create(gameChannel, '',[{
     },
   },
   // button to view your own hand
-{
+  {
     style: 1,
     label: "View your hand",
     custom_id: `view-hand`,
