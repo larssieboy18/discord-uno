@@ -76,8 +76,8 @@ let game = {
 };
 
 // debugging
-console.log(game)
-console.log(game.playerHands)
+console.log(game);
+console.log(game.playerHands);
 
 // save game to kv
 await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
