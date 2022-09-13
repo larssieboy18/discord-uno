@@ -11,37 +11,37 @@ console.log(context)
 // get channel id from context (this is the channel where the game is being played)
 let {gameChannel} = context.params.game
 
+// get guild id
+let {guild_id} = context.params.event
+
 // get playerlist from context (array of player objects)
 let playerlist = context.params.game.players
 
 // create starting deck
-let startingDeck = shuffle(uno_deck);
+let startingDeck = await shuffle(uno_deck);
 
 // create draw pile
 let drawPile = [];
 
- // // create player hands
- // let playerHands = {};
+// create player hands
+let playerHands = [];
 
 // deal 7 cards to each player
-let  playerHands = playerlist.map(player => {
-  let hand = [];
-  for (let i = 0; i < 7; i++) {
-    hand.push(startingDeck.pop());
-  }
-  return {
-    id: player.id,
-    hand: hand
-  }
-})
-
-// for (let i = 0; i < playerlist.length; i++) {
-//   let player = playerlist[i];
-//   playerHands[player] = [];
-//   for (let j = 0; j < 7; j++) {
-//     playerHands[player].push(startingDeck.pop());
+// let  playerHands = playerlist.map(player => {
+//   let hand = [];
+//   for (let i = 0; i < 7; i++) {
+//     hand.push(startingDeck.pop());
 //   }
-// }
+//   return {
+//     id: player.id,
+//     hand: hand
+//   }
+// })
+for (let i = 0; i < playerlist.length; i++) {
+  let player = playerlist[i];
+  playerHands[player] = [];
+  playerHands[player].unshift(startingDeck.slice(0, 7));
+}
 
 // create current deck
 let currentDeck = startingDeck;
@@ -91,7 +91,7 @@ let startingMessage = await messages.create(gameChannel, '',[{
     fields: [
       {
         name: "Current Card",
-        value: `${unoCards[discardPile[discardPile.length - 1]].emoji} ${unoCards[discardPile[discardPile.length - 1]].name}`,
+        value: `${discardPile[0]}`,
         inline: true,
       },
       {
