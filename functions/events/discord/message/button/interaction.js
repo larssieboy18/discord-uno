@@ -136,5 +136,5 @@ console.log(startGame)
 
 // if startGame is true, an error occured while starting the game. If it's false, the game started successfully.
 if (startGame) {
-  return await messages.create(context.params.event.channel_id, `There was an error starting the game. If this keeps happening, please report this on our Github page https://github.com/larssieboy18/discord-uno/issues and include the following error message: \`${startGame}\``)
+  return await messages.create(context.params.event.channel_id, `There was an error starting the game. If this keeps happening, please report this on our Github page https://github.com/larssieboy18/discord-uno/issues and include the following error message: \`${startGame.toString()}\``)
 }

@@ -1,84 +1,143 @@
-try{
+try {
 const uno_deck = require('../../../../helpers/others/uno_deck.json');
 const { unoCards } = require('../../../../helpers/others/uno_cards.json');
 const { shuffle } = require('../../../../helpers/others/functions.js');
 const kv = require('../../../../helpers/kv/functions.js');
+const messages = require('../../../../helpers/channels/messages/functions.js');
 
 // debugging
-console.log(context)
+// console.log(context)
 
 // get channel id from context (this is the channel where the game is being played)
 let {gameChannel} = context.params.game
+
+// get guild id
+let {guild_id} = context.params.event
 
 // get playerlist from context (array of player objects)
 let playerlist = context.params.game.players
 
 // create starting deck
-let startingDeck = shuffle(uno_deck);
+let startingDeck = await shuffle(uno_deck);
 
 // create draw pile
 let drawPile = [];
 
- // // create player hands
- // let playerHands = {};
+// create player hands
+let playerHands = [];
 
 // deal 7 cards to each player
-let  playerHands = playerlist.map(player => {
-  let hand = [];
-  for (let i = 0; i < 7; i++) {
-    hand.push(startingDeck.pop());
-  }
-  return {
-    id: player.id,
-    hand: hand
-  }
-})
-
-// for (let i = 0; i < playerlist.length; i++) {
-//   let player = playerlist[i];
-//   playerHands[player] = [];
-//   for (let j = 0; j < 7; j++) {
-//     playerHands[player].push(startingDeck.pop());
+// let  playerHands = playerlist.map(player => {
+//   let hand = [];
+//   for (let i = 0; i < 7; i++) {
+//     hand.push(startingDeck.pop());
 //   }
-// }
+//   return {
+//     id: player.id,
+//     hand: hand
+//   }
+// })
+for (let i = 0; i < playerlist.length; i++) {
+  playerHands[i] = startingDeck.slice(0, 7);
+}
 
-// create current deck
-let currentDeck = startingDeck;
 
 // create discard pile
-let discardPile = [currentDeck.pop()];
-
-// pick a random player from playerlist that starts the game
-let startingPlayer = playerlist[Math.floor(Math.random() * playerlist.length)];
+let discardPile = [];
 
 // add first card to discard pile
 discardPile.push(startingDeck.pop());
 
+// pick a random player from playerlist that starts the game
+let startingPlayer = playerlist[Math.floor(Math.random() * playerlist.length)];
+
 // create game object
 let game = {
-  channel: gameChannel,
-  playerlist: playerlist,
-  playerHands: playerHands,
-  drawPile: drawPile,
-  discardPile: discardPile,
-  currentPlayer: startingPlayer,
+  channel: gameChannel, // channel where the game is being played
+  playerlist: playerlist, // array of player objects
+  playerHands: playerHands, // object with player ids as keys and arrays of cards as values
+  drawPile: drawPile, // draw pile is empty at the start of the game
+  discardPile: discardPile, // discard pile has one card at the start of the game
+  currentPlayer: startingPlayer, // player object of the player that starts the game
   direction: 1, // reverse
   drawTwo: 0, // +2
   skip: 0, // skip
   wildColor: null, // color change because of wildcard
   colorChangeBy: null, // player who changed the color
   wildDrawFour: 0, // +4
-  playersWithUno: [],
-  unoCalled: [],
-  unoCalledBy: null,
-  unoMissedCalled: false,
-  unoMissedCalledBy: null,
+  playersWithUno: [], // array of player ids that have uno
+  unoCalled: [], // array of player ids that called uno
+  unoMissedCalled: false, // did someone notice that a player missed calling uno?
+  unoMissedCalledBy: null, // player who noticed that someone missed calling uno
 };
 
 // debugging
-console.log(game)
+console.log(game);
+console.log(game.playerHands);
 
+// save game to kv
 await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
+
+// send starting message to game channel
+let startingMessage = await messages.create(gameChannel, '',[{
+  embed: {
+    title: "UNO",
+    description: `**${startingPlayer.name}** starts the game!`,
+    color: 0x00ff00,
+    fields: [
+      {
+        name: "Current Card",
+        value: `${discardPile[0]}`,
+        inline: true,
+      },
+      {
+        name: "Current Player",
+        value: `${startingPlayer.name}`,
+        inline: true,
+      },
+    ],
+  },
+}], [
+  // button to draw a card
+  {
+    style: 1,
+    label: "Draw a card",
+    custom_id: `uno-draw`,
+    type: 2,
+    disabled: false,
+    emoji: {
+      id: "null",
+      name: "🃏",
+    },
+  },
+  // button to view your own hand
+  {
+    style: 1,
+    label: "View your hand",
+    custom_id: `view-hand`,
+    type: 2,
+    disabled: false,
+    emoji: {
+      id: "null",
+      name: "👀",
+    },
+  },
+  // button to call uno - disabled when you have more than 1 card
+  {
+    style: 1,
+    label: "Call UNO",
+    custom_id: `uno-call-uno`,
+    type: 2,
+    disabled: true,
+    emoji: {
+      id: "null",
+      name: "✋",
+    },
+  },
+]);
+
+// debugging
+console.log(startingMessage)
 
 // did an error occur?
 return false
@@ -86,78 +145,3 @@ return false
   console.error(errorStartingGame)
   return errorStartingGame
 }
-
-
-
-
-
-
-
-
- /*
- All code after here should be gone (?) because it will be moved to the new file.
- */ 
-// let players = game.players, playerIDs = Object.keys(players), playerCount = playerIDs.length
-
-// // shuffle the deck
-// let deck = shuffle(uno_deck)
-
-// // deal the cards
-// let hands = {}
-// for (let i = 0; i < playerCount; i++) {
-//   hands[playerIDs[i]] = []
-//   for (let j = 0; j < 7; j++) {
-//     hands[playerIDs[i]].push(deck.pop())
-//   }
-// }
-
-// // get the first card
-// let firstCard = deck.pop()
-
-// // get the first player
-// let firstPlayer = playerIDs[Math.floor(Math.random() * playerCount)]
-
-// // set the game data
-// game = {
-//   players: players,
-//   playerIDs: playerIDs,
-//   playerCount: playerCount,
-//   deck: deck,
-//   hands: hands,
-//   firstCard: firstCard,
-//   firstPlayer: firstPlayer,
-//   currentPlayer: firstPlayer,
-//   direction: 1,
-//   lastCard: firstCard,
-//   lastPlayer: firstPlayer,
-//   lastAction: 'draw',
-//   lastActionPlayer: firstPlayer,
-//   lastActionCount: 0,
-//   lastActionCard: null,
-//   lastActionCards: [],
-//   lastActionColor: null,
-//   lastActionWild: false,
-//   lastActionDraw: false,
-//   lastActionSkip: false,
-//   lastActionReverse: false,
-//   lastActionPlusAnyNumber: false,
-//   lastActionPlusTwo: false,
-//   lastActionPlusFour: false,
-// }
-
-// //await messages.create('976400262677803018', `${deck}`)
-
-// await gameStartFromDM(context.params.event, playerlistGuildID, playerlistChannelID, playerlistMessageID, allAccepted, PLmessage)
-
-
-
-// let cardData = [];
-// let cardDisplay = '';
-// for (let j = 0; j < 20; j++) {
-//   cardData.push(unoCards.find((card) => card.name == deck[j]));
-//   cardDisplay =
-//     cardDisplay +
-//     unoCards.find((card) => card.name == deck[j]).emoji;
-// }
-
-// await messages.create('976400262677803018', `${cardDisplay}`)
