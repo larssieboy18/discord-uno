@@ -4,6 +4,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/larssieboy18/discord-uno/badge)](https://www.codefactor.io/repository/github/larssieboy18/discord-uno)
 [![DeepScan grade](https://deepscan.io/api/teams/18640/projects/22229/branches/653932/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=18640&pid=22229&bid=653932)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=larssieboy18_discord-uno&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=larssieboy18_discord-uno)
 
 ## Contributors
 
