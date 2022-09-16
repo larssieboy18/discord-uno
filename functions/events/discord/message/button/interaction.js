@@ -113,6 +113,10 @@ fields = PLmessage.embeds[0].fields
 message to the user who accepted the game saying that the game will start shortly. If they haven't,
 it will send a message to the user who accepted the game saying that they will be notified when the
 game starts. */
+
+// TODO allAccepted initial message
+// if everyone has accepted the game, the initial message should be edited to something like: "everyone has accepted the game. It has started in <#channel>"
+
 let allAccepted
 for (let i = 0; i < fields.length; i++) {
   if (fields[i].name.includes('❌')) {
@@ -136,5 +140,6 @@ console.log(startGame)
 
 // if startGame is true, an error occured while starting the game. If it's false, the game started successfully.
 if (startGame) {
+  console.log(startGame)
   return await messages.create(context.params.event.channel_id, `There was an error starting the game. If this keeps happening, please report this on our Github page https://github.com/larssieboy18/discord-uno/issues and include the following error message: \`${startGame.toString()}\``)
 }

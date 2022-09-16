@@ -79,8 +79,8 @@ console.log(game.playerHands);
 await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
 
 // send starting message to game channel
-let startingMessage = await messages.create(gameChannel, '',[{
-  embed: {
+let startingMessage = await messages.create(gameChannel, '',[
+  {
     title: "UNO",
     description: `**${startingPlayer.name}** starts the game!`,
     color: 0x00ff00,
@@ -96,8 +96,7 @@ let startingMessage = await messages.create(gameChannel, '',[{
         inline: true,
       },
     ],
-  },
-}], [
+  }], [
   // button to draw a card
   {
     style: 1,
