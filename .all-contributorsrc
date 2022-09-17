@@ -1,6 +1,7 @@
 {
   "files": [
-    "README.md"
+    "README.md",
+    "CONTRIBUTORS.md"
   ],
   "imageSize": 100,
   "commit": false,
@@ -15,10 +16,29 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "hadiyahqureshi",
+      "name": "hadiyahqureshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39827241?v=4",
+      "profile": "https://github.com/hadiyahqureshi",
+      "contributions": [
+        "ideas",
+        "test"
+      ]
+    },
+    {
+      "login": "acode",
+      "name": "Autocode",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80448855?v=4",
+      "profile": "https://autocode.com/",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
-  "contributorsPerLine": 7,
-  "skipCi": true,
+  "contributorsPerLine": 5,
+  "skipCi": false,
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "discord-uno",
