@@ -15,10 +15,20 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "hadiyahqureshi",
+      "name": "hadiyahqureshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39827241?v=4",
+      "profile": "https://github.com/hadiyahqureshi",
+      "contributions": [
+        "ideas",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
-  "skipCi": true,
+  "skipCi": false,
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "discord-uno",
