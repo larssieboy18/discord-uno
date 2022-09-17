@@ -114,8 +114,7 @@ message to the user who accepted the game saying that the game will start shortl
 it will send a message to the user who accepted the game saying that they will be notified when the
 game starts. */
 
-// TODO [#53]: allAccepted initial message
-// 
+// TODO: allAccepted initial message
 // if everyone has accepted the game, the initial message should be edited to something like: "everyone has accepted the game. It has started in <#channel>"
 
 let allAccepted
