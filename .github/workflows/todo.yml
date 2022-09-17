@@ -1,11 +1,7 @@
 # https://github.com/dtinth/todo-actions
 name: Create issues from todos
 
-on:
-  push:
-    branches:
-     - '*'
-
+on: push
 
 jobs:
   todos:
