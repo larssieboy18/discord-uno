@@ -196,14 +196,14 @@ embed = [
   }
 ];
 
-// TODO: cancel button for the game creator
+// TODO [$6325e75f6d172e00090429c6]: cancel button for the game creator
 //
 // Add a button to the embed that allows the user to cancel the game.
 
 /* Sending a message to the channel where the command was used. */
 await responses.update(token, '', embed, [], 'CHANNEL_MESSAGE_WITH_SOURCE');
 
-// TODO: remove the double message
+// TODO [$6325e75f6d172e00090429c7]: remove the double message
 // 
 // Decide where the message should be sent and remove the other message.
 /* Sending a message to the channel where the game will be played. */
