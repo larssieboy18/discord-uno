@@ -9,6 +9,12 @@
 
 ## Contributors
 
-<a href="https://github.com/larssieboy18/discord-uno/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=larssieboy18/discord-uno" />
-</a>
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
