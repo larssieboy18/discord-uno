@@ -18,7 +18,7 @@
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="autocode.com/CreeperTown"><img src="https://avatars.githubusercontent.com/u/9215689?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lars</b></sub></a><br /><a href="https://github.com/larssieboy18/discord-uno/commits?author=larssieboy18" title="Code">💻</a></td>
+      <td align="center"><a href="https://autocode.com/CreeperTown"><img src="https://avatars.githubusercontent.com/u/9215689?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lars</b></sub></a><br /><a href="https://github.com/larssieboy18/discord-uno/commits?author=larssieboy18" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
