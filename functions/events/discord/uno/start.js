@@ -41,7 +41,6 @@ for (let i = 0; i < playerlist.length; i++) {
   playerHands[i] = startingDeck.slice(0, 7);
 }
 
-
 // create discard pile
 let discardPile = [];
 
@@ -82,7 +81,7 @@ await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a wee
 let startingMessage = await messages.create(gameChannel, '',[
   {
     title: "UNO",
-    description: `**${startingPlayer.name}** starts the game!`,
+    description: `**<@${startingPlayer.id}>** starts the game!`,
     color: 0x00ff00,
     fields: [
       {
