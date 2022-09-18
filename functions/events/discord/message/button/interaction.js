@@ -117,7 +117,7 @@ game starts. */
 // TODO allAccepted initial message
 // labels: enhancement
 // assignees: larssieboy18
-// lines: 123,124,125,126,127,128,129,130,132
+// lines: 123,132
 // if everyone has accepted the game, the initial message should be edited to something like: "everyone has accepted the game. It has started in <#channel>"
 
 let allAccepted
