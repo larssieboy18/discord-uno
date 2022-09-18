@@ -5,6 +5,7 @@ const kv = require('../../../../helpers/kv/functions.js');
 const guilds = require('../../../../helpers/guilds/functions.js');
 const functions = require('../../../../helpers/others/functions.js');
 const messages = require ('../../../../helpers/channels/messages/functions.js');
+const users = require ('../../../../helpers/users/functions.js');
 
 // ACK the event
 await responses.create(context.params.event.token);
@@ -61,12 +62,30 @@ for (let i = 2; i <= 8; i++) {
     if (playerlist.includes(playerID.value)) {
       return await lib.discord.interactions['@1.0.1'].responses.update({
         token: `${token}`,
-        content: `You can't have two of the same player.`,
+        content: `You can't add two of the same player. Game cancelled.`,
         response_type: 'CHANNEL_MESSAGE_WITH_SOURCE',
       });
     }
     playerlist.push(playerID.value);
   }
+}
+
+/* Checking if there are any bots in the playerlist. If there are, it will return a message saying that
+you can't add a bot to the playerlist and cancel the game. */
+let botInPlayerlist = false;
+for (let i = 0; i < playerlist.length; i++) {
+  let user = await users.retrieve(playerlist[i]);
+  if (user.bot) {
+    botInPlayerlist = true;
+    break;
+  }
+}
+if (botInPlayerlist) {
+  return await responses.update({
+    token: `${token}`,
+    content: `You can't add a bot to the playerlist. Game cancelled`,
+    response_type: 'CHANNEL_MESSAGE_WITH_SOURCE',
+  });
 }
 
 // prepare for start message
