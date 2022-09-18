@@ -138,7 +138,7 @@ if (!game) {
 } 
 
 let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start/`, '', {auth: context.service.hash}, {event: context.params.event, game: game, allAccepted: allAccepted,})
-console.log(startGame)
+console.log(startGame.data)
 
 // if startGame is true, an error occured while starting the game. If it's false, the game started successfully.
 if (startGame.data) {
