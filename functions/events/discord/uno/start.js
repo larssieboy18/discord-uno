@@ -77,6 +77,12 @@ try {
   // save game to kv
   await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
 
+
+  // TODO add buttons to starting message
+  // labels: enhancement
+  // assignees: larssieboy18
+  // lines: 86,105
+
   // send starting message to game channel
   let startingMessage = await messages.create(gameChannel, '', [
     {
@@ -96,50 +102,7 @@ try {
         },
       ],
     }
-  ], [
-    {
-      type: 1,
-      components:
-        [
-          // button to draw a card
-          {
-            style: 1,
-            label: "Draw a card",
-            custom_id: `uno-draw`,
-            type: 2,
-            disabled: false,
-            emoji: {
-              id: "null",
-              name: "🃏",
-            },
-          },
-          // button to view your own hand
-          {
-            style: 1,
-            label: "View your hand",
-            custom_id: `view-hand`,
-            type: 2,
-            disabled: false,
-            emoji: {
-              id: "null",
-              name: "👀",
-            },
-          },
-          // button to call uno - disabled when you have more than 1 card
-          {
-            style: 1,
-            label: "Call UNO",
-            custom_id: `uno-call-uno`,
-            type: 2,
-            disabled: true,
-            emoji: {
-              id: "null",
-              name: "✋",
-            },
-          },
-        ]
-    }
-  ]);
+  ], []);
 
   // debugging
   console.log(startingMessage)
