@@ -10,7 +10,7 @@ const messages = require ('../../../../helpers/channels/messages/functions.js');
 await responses.create(context.params.event.token);
 
 if (!context.params.event.guild_id) {
-  return await responses.update(context.params.event.token, 'This command can only be used in a server.');
+  return await responses.update(context.params.event.token, `This command can only be used in a server.`);
 }
 
 let { event } = context.params,
