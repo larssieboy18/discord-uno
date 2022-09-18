@@ -1,7 +1,7 @@
 try {
   const uno_deck = require('../../../../helpers/others/uno_deck.json');
   const { unoCards } = require('../../../../helpers/others/uno_cards.json');
-  const { shuffle } = require('../../../../helpers/others/functions.js');
+  const { shuffle, getCardByName } = require('../../../../helpers/others/functions.js');
   const kv = require('../../../../helpers/kv/functions.js');
   const messages = require('../../../../helpers/channels/messages/functions.js');
 
@@ -92,12 +92,13 @@ try {
       fields: [
         {
           name: "Current Card",
+          value: `${getCardByName(game.discardPile[game.discardPile.length - 1]).emoji} ${getCardByName(game.discardPile[game.discardPile.length - 1]).name}`,
           value: `${discardPile[0]}`,
           inline: true,
         },
         {
           name: "Current Player",
-          value: `${startingPlayer.name}`,
+          value: `<@${startingPlayer.id}>`,
           inline: true,
         },
       ],
