@@ -1,19 +1,18 @@
+# https://github.com/Noshup/todo-to-issue-action
+
+    name: "Automatically mark to-do's"
+    on: ["push"]
+    jobs:
+      build:
+        runs-on: "ubuntu-latest"
+        steps:
+          - uses: "actions/checkout@master"
+          - name: "Comment to Issue"
+            uses: "Noshup/todo-to-issue-action@master"
+            id: "todo"
+            with:
+              AUTO_ASSIGN: true
+
+# Possible alternatives:
+# "Base version": https://github.com/alstr/todo-to-issue-action
 # https://github.com/dtinth/todo-actions
-name: Create issues from todos
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  todos:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: todo-actions
-      uses: dtinth/todo-actions@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TODO_ACTIONS_MONGO_URL: ${{ secrets.TODO_ACTIONS_MONGO_URL }}
