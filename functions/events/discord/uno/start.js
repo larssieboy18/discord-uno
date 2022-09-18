@@ -72,11 +72,10 @@ try {
 
   // debugging
   console.log(game);
-  console.log(game.playerHands);
+  // console.log(game.playerHands);
 
   // save game to kv
   await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
-
 
   // TODO add buttons to starting message
   // labels: enhancement
@@ -92,8 +91,8 @@ try {
       fields: [
         {
           name: "Current Card",
-          value: `${getCardByName(game.discardPile[game.discardPile.length - 1]).emoji} ${getCardByName(game.discardPile[game.discardPile.length - 1]).name}`,
-          value: `${discardPile[0]}`,
+          value: `${(await getCardByName(discardPile[0])).emoji} ${(await getCardByName(discardPile[0])).name.replace(`_`, ` `)}`,
+          //value: `${discardPile[0]}`,
           inline: true,
         },
         {
@@ -105,8 +104,8 @@ try {
     }
   ], []);
 
-  // debugging
-  console.log(startingMessage)
+  // // debugging
+  // console.log(startingMessage)
 
   // did an error occur?
   return false
