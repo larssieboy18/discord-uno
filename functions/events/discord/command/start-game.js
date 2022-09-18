@@ -196,17 +196,22 @@ embed = [
   }
 ];
 
-// TODO [#51]: cancel button for the game creator
-//
+// TODO cancel button for the game creator
+// assignees: larssieboy18
+// lines: 204, 205
+// labels: enhancement
 // Add a button to the embed that allows the user to cancel the game.
 
 /* Sending a message to the channel where the command was used. */
 await responses.update(token, '', embed, [], 'CHANNEL_MESSAGE_WITH_SOURCE');
 
-// TODO [#52]: remove the double message
-//
+// TODO remove the double message
+// labels: bug
+// assignees: larssieboy18
+// lines: 214
 // Decide where the message should be sent and remove the other message.
 /* Sending a message to the channel where the game will be played. */
+
 await messages.create(channel, '', embed, []);
 
 startMessage = await responses.retrieve(token);
