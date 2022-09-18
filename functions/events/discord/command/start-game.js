@@ -19,6 +19,12 @@ let { event } = context.params,
 /* Getting the channel from the options. */
 let channel = (data.options.find((option) => option.name == `channel`)).value;
 
+// TODO check if selected channel is a text channel
+// sometimes people can select a voice channel or category, either on purpose or by accident. This should cause the command to fail.
+// lines: 16, 20
+// assignees: larssieboy18
+// labels: enhancement
+
 // // check if there already is a game in progress inside the same channel
 // let gameInProgress = await kv.get(`unoGame-${guild_id}-${channel}`, false);
 // if (gameInProgress) {
