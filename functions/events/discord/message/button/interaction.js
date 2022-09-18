@@ -137,7 +137,6 @@ if (!game) {
   return console.error(`There was an error getting the game data.` + `\n` + `Guild ID: ${guild_id}` + `\n` + `Channel ID: ${gameChannel}` + `\n` + `Message ID: ${playerlistMessageID}`)
 } 
 
-console.log(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start/`)
 let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start/`, '', {auth: context.service.hash}, {event: context.params.event, game: game, allAccepted: allAccepted,})
 console.log(startGame)
 
