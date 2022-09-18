@@ -204,7 +204,7 @@ embed = [
 await responses.update(token, '', embed, [], 'CHANNEL_MESSAGE_WITH_SOURCE');
 
 // TODO [#52]: remove the double message
-// 
+//
 // Decide where the message should be sent and remove the other message.
 /* Sending a message to the channel where the game will be played. */
 await messages.create(channel, '', embed, []);
