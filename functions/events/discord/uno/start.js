@@ -77,8 +77,8 @@ try {
     channel: gameChannel, // channel where the game is being played
     playerlist: playerlist, // array of player objects
     playerHands: playerHands, // object with player ids as keys and arrays of cards as values
-    drawPile: drawPile, // draw pile is empty at the start of the game
     discardPile: discardPile, // discard pile has one card at the start of the game
+    drawPile: startingDeck, // draw pile is the remaining cards after the first card has been added to the discard pile and player hands have been dealt
     currentPlayer: startingPlayer, // player object of the player that starts the game
     direction: 1, // reverse
     drawTwo: 0, // +2
