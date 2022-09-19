@@ -42,9 +42,6 @@ try {
   // create starting deck
   let startingDeck = await shuffle(uno_deck);
 
-  // create draw pile
-  let drawPile = [];
-
   // create player hands
   let playerHands = [];
 
