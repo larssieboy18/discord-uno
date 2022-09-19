@@ -7,7 +7,7 @@
       "sortValue": 53,
       "amount": 4,
       "emoji": "<:WILDCARD:975833511435051078>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/WILDCARD.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/WILDCARD.png?raw=true"
     },
     {
       "name": "WILDCARD_DRAW_FOUR",
@@ -16,7 +16,7 @@
       "sortValue": 54,
       "amount": 4,
       "emoji": "<:WILDCARD_DRAW_FOUR:975833511489585233>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/WILDCARD_DRAW_FOUR.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/WILDCARD_DRAW_FOUR.png?raw=true"
     },
     {
       "name": "BLUE_0",
@@ -25,7 +25,7 @@
       "sortValue": 1,
       "amount": 1,
       "emoji": "<:BLUE_0:975813084117622794>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_0.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_0.png?raw=true"
     },
     {
       "name": "BLUE_1",
@@ -34,7 +34,7 @@
       "sortValue": 2,
       "amount": 2,
       "emoji": "<:BLUE_1:975813084524453909>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_1.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_1.png?raw=true"
     },
     {
       "name": "BLUE_2",
@@ -43,7 +43,7 @@
       "sortValue": 3,
       "amount": 2,
       "emoji": "<:BLUE_2:975813089037520986>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_2.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_2.png?raw=true"
     },
     {
       "name": "BLUE_3",
@@ -52,7 +52,7 @@
       "sortValue": 4,
       "amount": 2,
       "emoji": "<:BLUE_3:975813083811422248>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_3.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_3.png?raw=true"
     },
     {
       "name": "BLUE_4",
@@ -61,7 +61,7 @@
       "sortValue": 5,
       "amount": 2,
       "emoji": "<:BLUE_4:975813084167942246>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_4.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_4.png?raw=true"
     },
     {
       "name": "BLUE_5",
@@ -70,7 +70,7 @@
       "sortValue": 6,
       "amount": 2,
       "emoji": "<:BLUE_5:975813081789792317>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_5.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_5.png?raw=true"
     },
     {
       "name": "BLUE_6",
@@ -79,7 +79,7 @@
       "sortValue": 7,
       "amount": 2,
       "emoji": "<:BLUE_6:975813084809687090>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_6.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_6.png?raw=true"
     },
     {
       "name": "BLUE_7",
@@ -88,7 +88,7 @@
       "sortValue": 8,
       "amount": 2,
       "emoji": "<:BLUE_7:975813084729978990>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_7.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_7.png?raw=true"
     },
     {
       "name": "BLUE_8",
@@ -97,7 +97,7 @@
       "sortValue": 9,
       "amount": 2,
       "emoji": "<:BLUE_8:975813083677208586>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_8.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_8.png?raw=true"
     },
     {
       "name": "BLUE_9",
@@ -106,7 +106,7 @@
       "sortValue": 10,
       "amount": 2,
       "emoji": "<:BLUE_9:975813084629336134>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_9.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_9.png?raw=true"
     },
     {
       "name": "BLUE_BLOCK",
@@ -115,7 +115,7 @@
       "sortValue": 11,
       "amount": 2,
       "emoji": "<:BLUE_BLOCK:975813084516065301>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_BLOCK.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_BLOCK.png?raw=true"
     },
     {
       "name": "BLUE_SWITCH",
@@ -124,7 +124,7 @@
       "sortValue": 12,
       "amount": 2,
       "emoji": "<:BLUE_SWITCH:975813084352491530>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_SWITCH.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_SWITCH.png?raw=true"
     },
     {
       "name": "BLUE_DRAW_TWO",
@@ -133,7 +133,7 @@
       "sortValue": 13,
       "amount": 2,
       "emoji": "<:BLUE_DRAW_TWO:975813084574806086>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/BLUE_DRAW_TWO.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/BLUE_DRAW_TWO.png?raw=true"
     },
     {
       "name": "RED_0",
@@ -142,7 +142,7 @@
       "sortValue": 14,
       "amount": 1,
       "emoji": "<:RED_0:975833511904833546>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_0.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_0.png?raw=true"
     },
     {
       "name": "RED_1",
@@ -151,7 +151,7 @@
       "sortValue": 15,
       "amount": 2,
       "emoji": "<:RED_1:975833510407450715>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_1.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_1.png?raw=true"
     },
     {
       "name": "RED_2",
@@ -160,7 +160,7 @@
       "sortValue": 16,
       "amount": 2,
       "emoji": "<:RED_2:975833511015645224>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_2.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_2.png?raw=true"
     },
     {
       "name": "RED_3",
@@ -169,7 +169,7 @@
       "sortValue": 17,
       "amount": 2,
       "emoji": "<:RED_3:975833511338586112>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_3.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_3.png?raw=true"
     },
     {
       "name": "RED_4",
@@ -178,7 +178,7 @@
       "sortValue": 18,
       "amount": 2,
       "emoji": "<:RED_4:975833511388934205>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_4.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_4.png?raw=true"
     },
     {
       "name": "RED_5",
@@ -187,7 +187,7 @@
       "sortValue": 19,
       "amount": 2,
       "emoji": "<:RED_5:975833510759772170>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_5.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_5.png?raw=true"
     },
     {
       "name": "RED_6",
@@ -196,7 +196,7 @@
       "sortValue": 20,
       "amount": 2,
       "emoji": "<:RED_6:975833511497965598>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_6.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_6.png?raw=true"
     },
     {
       "name": "RED_7",
@@ -205,7 +205,7 @@
       "sortValue": 21,
       "amount": 2,
       "emoji": "<:RED_7:975833510982086736>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_7.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_7.png?raw=true"
     },
     {
       "name": "RED_8",
@@ -214,7 +214,7 @@
       "sortValue": 22,
       "amount": 2,
       "emoji": "<:RED_8:975833510445215775>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_8.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_8.png?raw=true"
     },
     {
       "name": "RED_9",
@@ -223,7 +223,7 @@
       "sortValue": 23,
       "amount": 2,
       "emoji": "<:RED_9:975833510571044914>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_9.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_9.png?raw=true"
     },
     {
       "name": "RED_BLOCK",
@@ -232,7 +232,7 @@
       "sortValue": 24,
       "amount": 2,
       "emoji": "<:RED_BLOCK:975833508465479760>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_BLOCK.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_BLOCK.png?raw=true"
     },
     {
       "name": "RED_SWITCH",
@@ -241,7 +241,7 @@
       "sortValue": 25,
       "amount": 2,
       "emoji": "<:RED_SWITCH:975833509790875648>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_SWITCH.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_SWITCH.png?raw=true"
     },
     {
       "name": "RED_DRAW_TWO",
@@ -250,7 +250,7 @@
       "sortValue": 26,
       "amount": 2,
       "emoji": "<:RED_DRAW_TWO:975833509451149422>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/RED_DRAW_TWO.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/RED_DRAW_TWO.png?raw=true"
     },
     {
       "name": "YELLOW_0",
@@ -259,7 +259,7 @@
       "sortValue": 27,
       "amount": 1,
       "emoji": "<:YELLOW_0:975833509908340777>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_0.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_0.png?raw=true"
     },
     {
       "name": "YELLOW_1",
@@ -268,7 +268,7 @@
       "sortValue": 28,
       "amount": 2,
       "emoji": "<:YELLOW_1:975833510793330779>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_1.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_1.png?raw=true"
     },
     {
       "name": "YELLOW_2",
@@ -277,7 +277,7 @@
       "sortValue": 29,
       "amount": 2,
       "emoji": "<:YELLOW_2:975833510776557618>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_2.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_2.png?raw=true"
     },
     {
       "name": "YELLOW_3",
@@ -286,7 +286,7 @@
       "sortValue": 30,
       "amount": 2,
       "emoji": "<:YELLOW_3:975833511284076646>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_3.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_3.png?raw=true"
     },
     {
       "name": "YELLOW_4",
@@ -295,7 +295,7 @@
       "sortValue": 31,
       "amount": 2,
       "emoji": "<:YELLOW_4:975833511133069403>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_4.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_4.png?raw=true"
     },
     {
       "name": "YELLOW_5",
@@ -304,7 +304,7 @@
       "sortValue": 32,
       "amount": 2,
       "emoji": "<:YELLOW_5:975833511015620609>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_5.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_5.png?raw=true"
     },
     {
       "name": "YELLOW_6",
@@ -313,7 +313,7 @@
       "sortValue": 33,
       "amount": 2,
       "emoji": "<:YELLOW_6:975833511497961592>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_6.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_6.png?raw=true"
     },
     {
       "name": "YELLOW_7",
@@ -322,7 +322,7 @@
       "sortValue": 34,
       "amount": 2,
       "emoji": "<:YELLOW_7:975833510378102784>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_7.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_7.png?raw=true"
     },
     {
       "name": "YELLOW_8",
@@ -331,7 +331,7 @@
       "sortValue": 35,
       "amount": 2,
       "emoji": "<:YELLOW_8:975833510784938004>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_8.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_8.png?raw=true"
     },
     {
       "name": "YELLOW_9",
@@ -340,7 +340,7 @@
       "sortValue": 36,
       "amount": 2,
       "emoji": "<:YELLOW_9:975833510889807902>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_9.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_9.png?raw=true"
     },
     {
       "name": "YELLOW_BLOCK",
@@ -349,7 +349,7 @@
       "sortValue": 37,
       "amount": 2,
       "emoji": "<:YELLOW_BLOCK:975833511497973840>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_BLOCK.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_BLOCK.png?raw=true"
     },
     {
       "name": "YELLOW_SWITCH",
@@ -358,7 +358,7 @@
       "sortValue": 38,
       "amount": 2,
       "emoji": "<:YELLOW_SWITCH:975833511497977856>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_SWITCH.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_SWITCH.png?raw=true"
     },
     {
       "name": "YELLOW_DRAW_TWO",
@@ -367,7 +367,7 @@
       "sortValue": 39,
       "amount": 2,
       "emoji": "<:YELLOW_DRAW_TWO:975833510269046875>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/YELLOW_DRAW_TWO.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/YELLOW_DRAW_TWO.png?raw=true"
     },
     {
       "name": "GREEN_0",
@@ -376,7 +376,7 @@
       "sortValue": 40,
       "amount": 1,
       "emoji": "<:GREEN_0:975813156792324156>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_0.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_0.png?raw=true"
     },
     {
       "name": "GREEN_1",
@@ -385,7 +385,7 @@
       "sortValue": 41,
       "amount": 2,
       "emoji": "<:GREEN_1:975813156704243732>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_1.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_1.png?raw=true"
     },
     {
       "name": "GREEN_2",
@@ -394,7 +394,7 @@
       "sortValue": 42,
       "amount": 2,
       "emoji": "<:GREEN_2:975813156058329168>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_2.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_2.png?raw=true"
     },
     {
       "name": "GREEN_3",
@@ -403,7 +403,7 @@
       "sortValue": 43,
       "amount": 2,
       "emoji": "<:GREEN_3:975813155710197861>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_3.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_3.png?raw=true"
     },
     {
       "name": "GREEN_4",
@@ -412,7 +412,7 @@
       "sortValue": 44,
       "amount": 2,
       "emoji": "<:GREEN_4:975813156012187668>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_4.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_4.png?raw=true"
     },
     {
       "name": "GREEN_5",
@@ -421,7 +421,7 @@
       "sortValue": 45,
       "amount": 2,
       "emoji": "<:GREEN_5:975813155919921204>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_5.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_5.png?raw=true"
     },
     {
       "name": "GREEN_6",
@@ -430,7 +430,7 @@
       "sortValue": 46,
       "amount": 2,
       "emoji": "<:GREEN_6:975813156473544755>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_6.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_6.png?raw=true"
     },
     {
       "name": "GREEN_7",
@@ -439,7 +439,7 @@
       "sortValue": 47,
       "amount": 2,
       "emoji": "<:GREEN_7:975813156528066680>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_7.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_7.png?raw=true"
     },
     {
       "name": "GREEN_8",
@@ -448,7 +448,7 @@
       "sortValue": 48,
       "amount": 2,
       "emoji": "<:GREEN_8:975813156507115530>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_8.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_8.png?raw=true"
     },
     {
       "name": "GREEN_9",
@@ -457,7 +457,7 @@
       "sortValue": 49,
       "amount": 2,
       "emoji": "<:GREEN_9:975813156565839922>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_9.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_9.png?raw=true"
     },
     {
       "name": "GREEN_BLOCK",
@@ -466,7 +466,7 @@
       "sortValue": 50,
       "amount": 2,
       "emoji": "<:GREEN_BLOCK:975813156658085928>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_BLOCK.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_BLOCK.png?raw=true"
     },
     {
       "name": "GREEN_SWITCH",
@@ -475,7 +475,7 @@
       "sortValue": 51,
       "amount": 2,
       "emoji": "<:GREEN_SWITCH:975813156339327056>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_SWITCH.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_SWITCH.png?raw=true"
     },
     {
       "name": "GREEN_DRAW_TWO",
@@ -484,7 +484,7 @@
       "sortValue": 52,
       "amount": 2,
       "emoji": "<:GREEN_DRAW_TWO:975813156146413569>",
-      "url": "https://dev--unocardgame.creepertown.autocode.gg/GREEN_DRAW_TWO.png"
+      "url": "https://github.com/larssieboy18/discord-uno/blob/main/www/GREEN_DRAW_TWO.png?raw=true"
     }
   ]
 }
