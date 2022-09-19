@@ -5,8 +5,30 @@ try {
   const kv = require('../../../../helpers/kv/functions.js');
   const messages = require('../../../../helpers/channels/messages/functions.js');
 
-  // debugging
-  // console.log(context)
+  // debugging - provide test data while debugging
+  let context = {
+    params: {
+      game: {
+        gameChannel: `976400262677803018`,
+        players: [
+          {
+            id: `119473151913623552`
+          },
+          {
+            id: `793188304764928023`
+          }
+        ]
+      },
+      event: {
+        guild_id: `975789410186567730`,
+      },
+    },
+  }
+
+  // TODO remove test data before pushing merging to master
+  // lines: 8,26
+  // labels: development
+  // assignees: larssieboy18
 
   // get channel id from context (this is the channel where the game is being played)
   let { gameChannel } = context.params.game
@@ -91,7 +113,7 @@ try {
       fields: [
         {
           name: "Current Card",
-          value: `${(await getCardByName(discardPile[0])).emoji} ${(await getCardByName(discardPile[0])).name.replace(`_`, ` `)}`,
+          value: `${(await getCardByName(discardPile[0])).emoji} ${(await getCardByName(discardPile[0])).name.replace(/\_/gi, ` `)}`,
           //value: `${discardPile[0]}`,
           inline: true,
         },
