@@ -123,7 +123,11 @@ try {
           inline: true,
         },
       ],
-    }
+      image: {
+        url: `${(await getCardByName(discardPile[0])).url}`,
+        proxy_url: `${(await getCardByName(discardPile[0])).url}`,
+      },
+    },
   ], []);
 
   // debugging
