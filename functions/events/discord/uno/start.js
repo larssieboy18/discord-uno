@@ -104,8 +104,8 @@ try {
     }
   ], []);
 
-  // // debugging
-  // console.log(startingMessage)
+  // debugging
+  console.log(startingMessage)
 
   // did an error occur?
   return false
