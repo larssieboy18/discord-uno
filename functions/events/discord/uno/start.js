@@ -166,7 +166,7 @@ try {
   ], []);
 
   // TODO Change description of embed when it is not the start of the game anymore
-  // lines 120
+  // lines: 120
   // labels: development
   // assignees: larssieboy18
   // Currently, the message shows a message saying that the player that starts the game starts the game. For consequent turns, it should be altered to show that it is someones turn instead of the person starting a game.
