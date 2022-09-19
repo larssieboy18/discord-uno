@@ -3,7 +3,7 @@
     name: "Automatically mark to-do's"
     on: ["push"]
     jobs:
-      build:
+      todo:
         runs-on: "ubuntu-latest"
         steps:
           - uses: "actions/checkout@master"
