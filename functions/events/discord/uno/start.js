@@ -155,7 +155,7 @@ try {
         },
         {
           name: "Current Card",
-          value: `${(await getCardByName(discardPile[0])).emoji} ${(await getCardByName(discardPile[0])).name}`,
+          value: `${(await getCardByName(discardPile[0])).emoji} ${(await getCardByName(discardPile[0])).name.replace(/\_/gi, ' ')}`,
           inline: false,
         },
       ],
