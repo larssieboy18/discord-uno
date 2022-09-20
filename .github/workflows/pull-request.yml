@@ -5,11 +5,18 @@
 # Source repository: https://github.com/actions/dependency-review-action
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
 
+# |=========================== Datree Policy Check ===================================|
+# | This workflow will verify that all committed config files in the PR are valid.    |
+# | If one of the config files is happened to be a K8s config file (manifest),        |
+# | It will also automatically be tested for schema validation and misconfigurations. |
+# | For more info visit: https://github.com/marketplace/datree                        |
+# |===================================================================================|
+
 name: "Pull Request Workflow"
 on: [pull_request]
 
 permissions:
-  contents: read, write
+  contents: write
 
 jobs:
   dependency-review:
@@ -44,16 +51,9 @@ jobs:
         if: steps.changed-files.outputs.any_changed == 'true'
         run: curl https://get.datree.io | /bin/bash -s
 
-      # |=========================== Datree Policy Check ===================================|
-      # | This workflow will verify that all committed config files in the PR are valid.    |
-      # | If one of the config files is happened to be a K8s config file (manifest),        |
-      # | It will also automatically be tested for schema validation and misconfigurations. |
-      # | For more info visit: https://github.com/marketplace/datree                        |
-      # |===================================================================================|
-
       - name: Datree validate config files
         if: steps.changed-files.outputs.any_changed == 'true'
-        uses: datreeio/action-datree@main # For more info about this Actions visit 👉 https://github.com/datreeio/action-datree
+        uses: datreeio/action-datree@main 
         with:
           path: ${{ steps.changed-files.outputs.all_changed_files }}
           cliArguments: --only-k8s-files
