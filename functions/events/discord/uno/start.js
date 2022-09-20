@@ -5,37 +5,6 @@ try {
   const kv = require('../../../../helpers/kv/functions.js');
   const messages = require('../../../../helpers/channels/messages/functions.js');
 
-  // debugging - provide test data while debugging
-  let context = {
-    params: {
-      game: {
-        gameChannel: `976400262677803018`,
-        players: [
-          {
-            id: `119473151913623552`,
-          },
-          {
-            id: `793188304764928023`,
-          },
-          {
-            id: `975790862539825164`,
-          },
-          {
-            id: `976400332299063366`,
-          }
-        ]
-      },
-      event: {
-        guild_id: `975789410186567730`,
-      },
-    },
-  }
-
-  // TODO remove test data before pushing merging to master
-  // lines: 8,26
-  // labels: development
-  // assignees: larssieboy18
-
   // get channel id from context (this is the channel where the game is being played)
   let { gameChannel } = context.params.game
 
@@ -51,6 +20,7 @@ try {
   // create player hands
   let playerHands = [];
 
+  // deal 7 cards to each player
   for (let i = 0; i < playerlist.length; i++) {
     playerHands[i] = startingDeck.slice(0, 7);
   }
