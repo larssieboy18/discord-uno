@@ -51,18 +51,6 @@ try {
   // create player hands
   let playerHands = [];
 
-  // deal 7 cards to each player
-  // let  playerHands = playerlist.map(player => {
-  //   let hand = [];
-  //   for (let i = 0; i < 7; i++) {
-  //     hand.push(startingDeck.pop());
-  //   }
-  //   return {
-  //     id: player.id,
-  //     hand: hand
-  //   }
-  // })
-
   for (let i = 0; i < playerlist.length; i++) {
     playerHands[i] = startingDeck.slice(0, 7);
   }
@@ -106,14 +94,13 @@ try {
   // console.log(game.playerHands);
 
   // save game to kv
-  await kv.set(`gameDetails-UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
+  await kv.set(`UNO-${guild_id}-${gameChannel}`, game, 604800 /* a week */);
 
   // TODO add buttons to starting message
   // labels: enhancement
   // assignees: larssieboy18
   // lines: 86,105
 
-  console.log(discardPile[0])
   // send starting message to game channel
   let startingMessage = await messages.create(gameChannel, '', [
     {
@@ -172,12 +159,8 @@ try {
   // assignees: larssieboy18
   // Currently, the message shows a message saying that the player that starts the game starts the game. For consequent turns, it should be altered to show that it is someones turn instead of the person starting a game.
 
-  // debugging
-  console.log(startingMessage)
-
   // did an error occur?
   return false
-
 } catch (errorStartingGame) {
   console.error(errorStartingGame)
   return errorStartingGame
