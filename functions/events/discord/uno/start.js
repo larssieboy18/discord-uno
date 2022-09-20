@@ -55,6 +55,12 @@ try {
     playerHands[i] = startingDeck.slice(0, 7);
   }
 
+  // TODO Special card handling on first turn
+  // lines: 64,68
+  // assignees: larssieboy18
+  // labels: enhancement
+  // If a special card is dealt at the first turn, the game should apply that effect to the first player (e.g. skip the player on a skip card, give 2 extra card on a +2 card, etc.)
+
   // create discard pile
   let discardPile = [];
 
