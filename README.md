@@ -11,15 +11,15 @@
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=larssieboy18_discord-uno&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=larssieboy18_discord-uno)
 
 ## Translations
-[![gitlocalized ](https://gitlocalize.com/repo/7955/whole_project/badge.svg)](https://gitlocalize.com/repo/7955/whole_project?utm_source=badge)
+[![gitlocalized ](https://gitlocalize.com/repo/7956/whole_project/badge.svg)](https://gitlocalize.com/repo/7956/whole_project?utm_source=badge)
 
-[![gitlocalized ](https://gitlocalize.com/repo/7955/de/badge.svg)](https://gitlocalize.com/repo/7955/de?utm_source=badge)
-[![gitlocalized ](https://gitlocalize.com/repo/7955/es/badge.svg)](https://gitlocalize.com/repo/7955/es?utm_source=badge)
-[![gitlocalized ](https://gitlocalize.com/repo/7955/fr/badge.svg)](https://gitlocalize.com/repo/7955/fr?utm_source=badge)
+[![gitlocalized ](https://gitlocalize.com/repo/7956/de/badge.svg)](https://gitlocalize.com/repo/7956/de?utm_source=badge)
+[![gitlocalized ](https://gitlocalize.com/repo/7956/es/badge.svg)](https://gitlocalize.com/repo/7956/es?utm_source=badge)
+[![gitlocalized ](https://gitlocalize.com/repo/7956/fr/badge.svg)](https://gitlocalize.com/repo/7956/fr?utm_source=badge)
 
-[![gitlocalized ](https://gitlocalize.com/repo/7955/nl/badge.svg)](https://gitlocalize.com/repo/7955/nl?utm_source=badge)
-[![gitlocalized ](https://gitlocalize.com/repo/7955/pt/badge.svg)](https://gitlocalize.com/repo/7955/pt?utm_source=badge)
-[![gitlocalized ](https://gitlocalize.com/repo/7955/zh/badge.svg)](https://gitlocalize.com/repo/7955/zh?utm_source=badge)
+[![gitlocalized ](https://gitlocalize.com/repo/7956/nl/badge.svg)](https://gitlocalize.com/repo/7956/nl?utm_source=badge)
+[![gitlocalized ](https://gitlocalize.com/repo/7956/pt/badge.svg)](https://gitlocalize.com/repo/7956/pt?utm_source=badge)
+[![gitlocalized ](https://gitlocalize.com/repo/7956/zh/badge.svg)](https://gitlocalize.com/repo/7956/zh?utm_source=badge)
 
 ## Contributors
 
