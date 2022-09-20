@@ -4,6 +4,14 @@
 #
 # Source repository: https://github.com/actions/dependency-review-action
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
+
+# |=========================== Datree Policy Check ===================================|
+# | This workflow will verify that all committed config files in the PR are valid.    |
+# | If one of the config files is happened to be a K8s config file (manifest),        |
+# | It will also automatically be tested for schema validation and misconfigurations. |
+# | For more info visit: https://github.com/marketplace/datree                        |
+# |===================================================================================|
+
 name: 'Pull Request Workflow'
 on: [pull_request]
 
@@ -42,13 +50,6 @@ jobs:
       - name: Install Datree's CLI
         if: steps.changed-files.outputs.any_changed == 'true'
         run: curl https://get.datree.io | /bin/bash -s
-
-      # |=========================== Datree Policy Check ===================================|
-      # | Prevent Kubernetes misconfigurations from reaching production!                    |
-      # | Datree is a CLI tool to ensure K8s configs follow stability & security            |
-      # | best practices as well as your organization’s policies.                           |
-      # | For more info visit: https://github.com/datreeio/datree                           |
-      # |===================================================================================|
 
       - name: Datree validate config files
         if: steps.changed-files.outputs.any_changed == 'true'
