@@ -115,6 +115,9 @@ it will send a message to the user who accepted the game saying that they will b
 game starts. */
 
 // TODO allAccepted initial message
+// labels: enhancement
+// assignees: larssieboy18
+// lines: 123,132
 // if everyone has accepted the game, the initial message should be edited to something like: "everyone has accepted the game. It has started in <#channel>"
 
 let allAccepted
@@ -134,12 +137,11 @@ if (!game) {
   return console.error(`There was an error getting the game data.` + `\n` + `Guild ID: ${guild_id}` + `\n` + `Channel ID: ${gameChannel}` + `\n` + `Message ID: ${playerlistMessageID}`)
 } 
 
-console.log(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start/`)
 let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start/`, '', {auth: context.service.hash}, {event: context.params.event, game: game, allAccepted: allAccepted,})
-console.log(startGame)
+console.log(startGame.data);
 
 // if startGame is true, an error occured while starting the game. If it's false, the game started successfully.
-if (startGame) {
-  console.log(startGame)
+if (startGame.data) {
+  console.log(startGame.data.details);
   return await messages.create(context.params.event.channel_id, `There was an error starting the game. If this keeps happening, please report this on our Github page https://github.com/larssieboy18/discord-uno/issues and include the following error message: \`${startGame.toString()}\``)
 }
