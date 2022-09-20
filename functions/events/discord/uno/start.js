@@ -102,7 +102,7 @@ try {
   // lines: 86,105
 
   // send starting message to game channel
-  let startingMessage = await messages.create(gameChannel, '', [
+  await messages.create(gameChannel, '', [
     {
       title: "UNO",
       description: `**<@${startingPlayer.id}>** starts the game!`,
