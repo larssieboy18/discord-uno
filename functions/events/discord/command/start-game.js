@@ -4,16 +4,27 @@ const responses = require('../../../../helpers/interactions/responses.js');
 const kv = require('../../../../helpers/kv/functions.js');
 const guilds = require('../../../../helpers/guilds/functions.js');
 const functions = require('../../../../helpers/others/functions.js');
-const messages = require ('../../../../helpers/channels/messages/functions.js');
+const messages = require('../../../../helpers/channels/messages/functions.js');
+const users = require('../../../../helpers/users/functions.js');
 
 // ACK the event
 await responses.create(context.params.event.token);
+
+if (!context.params.event.guild_id) {
+  return await responses.update(context.params.event.token, `This command can only be used in a server.`);
+}
 
 let { event } = context.params,
   { member, data, token, guild_id, received_at } = event;
 
 /* Getting the channel from the options. */
 let channel = (data.options.find((option) => option.name == `channel`)).value;
+
+// TODO check if selected channel is a text channel
+// sometimes people can select a voice channel or category, either on purpose or by accident. This should cause the command to fail.
+// lines: 16, 20
+// assignees: larssieboy18
+// labels: enhancement
 
 // // check if there already is a game in progress inside the same channel
 // let gameInProgress = await kv.get(`unoGame-${guild_id}-${channel}`, false);
@@ -23,7 +34,7 @@ let channel = (data.options.find((option) => option.name == `channel`)).value;
 
 let startMessage = await responses.retrieve(token);
 
-let sleep = functions.sleep;
+let { sleep } = functions;
 
 /* create a list with players - person running the command is player1 and is automatically added to the list */
 let playerlist = [`${member.user.id}`]
@@ -51,12 +62,30 @@ for (let i = 2; i <= 8; i++) {
     if (playerlist.includes(playerID.value)) {
       return await lib.discord.interactions['@1.0.1'].responses.update({
         token: `${token}`,
-        content: `You can't have two of the same player.`,
+        content: `You can't add two of the same player. Game cancelled.`,
         response_type: 'CHANNEL_MESSAGE_WITH_SOURCE',
       });
     }
     playerlist.push(playerID.value);
   }
+}
+
+/* Checking if there are any bots in the playerlist. If there are, it will return a message saying that
+you can't add a bot to the playerlist and cancel the game. */
+let botInPlayerlist = false;
+for (let i = 0; i < playerlist.length; i++) {
+  let user = await users.retrieve(playerlist[i]);
+  if (user.bot) {
+    botInPlayerlist = true;
+    break;
+  }
+}
+if (botInPlayerlist) {
+  return await responses.update({
+    token: `${token}`,
+    content: `You can't add a bot to the playerlist. Game cancelled`,
+    response_type: 'CHANNEL_MESSAGE_WITH_SOURCE',
+  });
 }
 
 // prepare for start message
@@ -197,14 +226,21 @@ embed = [
 ];
 
 // TODO cancel button for the game creator
+// assignees: larssieboy18
+// lines: 204, 205
+// labels: enhancement
 // Add a button to the embed that allows the user to cancel the game.
 
 /* Sending a message to the channel where the command was used. */
 await responses.update(token, '', embed, [], 'CHANNEL_MESSAGE_WITH_SOURCE');
 
 // TODO remove the double message
-// Decide where the message should be sent and remove the other message
+// labels: bug
+// assignees: larssieboy18
+// lines: 214
+// Decide where the message should be sent and remove the other message.
 /* Sending a message to the channel where the game will be played. */
+
 await messages.create(channel, '', embed, []);
 
 startMessage = await responses.retrieve(token);
