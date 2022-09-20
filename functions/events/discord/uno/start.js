@@ -42,7 +42,6 @@ try {
 
   // create a list of players in the order that they will go
   let playerOrder = playerlist.slice(playerlist.indexOf(startingPlayer)).concat(playerlist.slice(0, playerlist.indexOf(startingPlayer)));
-  console.log(playerOrder)
 
   // create game object
   let game = {
@@ -118,7 +117,7 @@ try {
         },
         {
           name: "Current Card",
-          value: `${(await getCardByName(discardPile[0])).emoji} ${(await getCardByName(discardPile[0])).name.replace(/\_/gi, ' ')}`,
+          value: `${(await getCardByName(discardPile[0])).emoji} ${(await getCardByName(discardPile[0])).name.replace(/_/gi, ' ')}`,
           inline: false,
         },
       ],
