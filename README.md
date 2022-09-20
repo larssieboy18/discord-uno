@@ -12,9 +12,11 @@
 
 ## Translations
 [![gitlocalized ](https://gitlocalize.com/repo/7955/whole_project/badge.svg)](https://gitlocalize.com/repo/7955/whole_project?utm_source=badge)
+
 [![gitlocalized ](https://gitlocalize.com/repo/7955/de/badge.svg)](https://gitlocalize.com/repo/7955/de?utm_source=badge)
 [![gitlocalized ](https://gitlocalize.com/repo/7955/es/badge.svg)](https://gitlocalize.com/repo/7955/es?utm_source=badge)
 [![gitlocalized ](https://gitlocalize.com/repo/7955/fr/badge.svg)](https://gitlocalize.com/repo/7955/fr?utm_source=badge)
+
 [![gitlocalized ](https://gitlocalize.com/repo/7955/nl/badge.svg)](https://gitlocalize.com/repo/7955/nl?utm_source=badge)
 [![gitlocalized ](https://gitlocalize.com/repo/7955/pt/badge.svg)](https://gitlocalize.com/repo/7955/pt?utm_source=badge)
 [![gitlocalized ](https://gitlocalize.com/repo/7955/zh/badge.svg)](https://gitlocalize.com/repo/7955/zh?utm_source=badge)
