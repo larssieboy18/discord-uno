@@ -5,14 +5,7 @@
 # Source repository: https://github.com/actions/dependency-review-action
 # Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
 
-# |=========================== Datree Policy Check ===================================|
-# | This workflow will verify that all committed config files in the PR are valid.    |
-# | If one of the config files is happened to be a K8s config file (manifest),        |
-# | It will also automatically be tested for schema validation and misconfigurations. |
-# | For more info visit: https://github.com/marketplace/datree                        |
-# |===================================================================================|
-
-name: 'Pull Request Workflow'
+name: "Pull Request Workflow"
 on: [pull_request]
 
 permissions:
@@ -22,10 +15,10 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout Repository'
+      - name: "Checkout Repository"
         uses: actions/checkout@v3
-      - name: 'Dependency Review'
-        uses: actions/dependency-review-action@v2        
+      - name: "Dependency Review"
+        uses: actions/dependency-review-action@v2
 
   configs-validation:
     runs-on: ubuntu-latest
@@ -50,6 +43,13 @@ jobs:
       - name: Install Datree's CLI
         if: steps.changed-files.outputs.any_changed == 'true'
         run: curl https://get.datree.io | /bin/bash -s
+
+      # |=========================== Datree Policy Check ===================================|
+      # | This workflow will verify that all committed config files in the PR are valid.    |
+      # | If one of the config files is happened to be a K8s config file (manifest),        |
+      # | It will also automatically be tested for schema validation and misconfigurations. |
+      # | For more info visit: https://github.com/marketplace/datree                        |
+      # |===================================================================================|
 
       - name: Datree validate config files
         if: steps.changed-files.outputs.any_changed == 'true'
