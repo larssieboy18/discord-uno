@@ -1,7 +1,8 @@
 {
   "files": [
     "README.md",
-    "CONTRIBUTORS.md"
+    "CONTRIBUTORS.md",
+    "locale/nl/README.md"
   ],
   "imageSize": 100,
   "commit": false,
