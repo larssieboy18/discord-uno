@@ -53,7 +53,7 @@ jobs:
 
       - name: Datree validate config files
         if: steps.changed-files.outputs.any_changed == 'true'
-        uses: datreeio/action-datree@main 
+        uses: datreeio/action-datree@main
         with:
           path: ${{ steps.changed-files.outputs.all_changed_files }}
           cliArguments: --only-k8s-files
