@@ -4,8 +4,8 @@ const responses = require('../../../../helpers/interactions/responses.js');
 const kv = require('../../../../helpers/kv/functions.js');
 const guilds = require('../../../../helpers/guilds/functions.js');
 const functions = require('../../../../helpers/others/functions.js');
-const messages = require ('../../../../helpers/channels/messages/functions.js');
-const users = require ('../../../../helpers/users/functions.js');
+const messages = require('../../../../helpers/channels/messages/functions.js');
+const users = require('../../../../helpers/users/functions.js');
 
 // ACK the event
 await responses.create(context.params.event.token);
@@ -34,7 +34,7 @@ let channel = (data.options.find((option) => option.name == `channel`)).value;
 
 let startMessage = await responses.retrieve(token);
 
-let sleep = functions.sleep;
+let { sleep } = functions;
 
 /* create a list with players - person running the command is player1 and is automatically added to the list */
 let playerlist = [`${member.user.id}`]
