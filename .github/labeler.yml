@@ -1,0 +1,34 @@
+locale:
+- locale/*
+
+workflow:
+- .github/workflows/*
+- .github/close-label.yml
+- .github/labeler.yml
+- .github/dependabot.yml
+
+documentation:
+- .all-contributorsrc
+- README.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- CONTRIBUTORS.md
+- LICENSE
+- .github/FUNDING.yml
+- .github/ISSUE_TEMPLATE/*
+
+dependencies:
+- package.json
+- renovate.json
+- .github/dependabot.yml
+- .github/workflows/dependency-review.yml
+
+image:
+- www/*
+
+wontfix:
+- payloads.json
+
+code:
+- functions/*
+- helpers/*
