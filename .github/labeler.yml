@@ -21,6 +21,7 @@ dependencies:
 - package.json
 - renovate.json
 - .github/dependabot.yml
+- .github/workflows/dependency-review.yml
 
 image:
 - www/*
