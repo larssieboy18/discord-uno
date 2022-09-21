@@ -23,7 +23,7 @@ Sprache | Übersetzt
 [Französisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/fr) | [](https://gitlocalize.com/repo/7956/fr?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/fr/badge.svg)
 [Niederländisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/nl) | [](https://gitlocalize.com/repo/7956/nl?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/nl/badge.svg)
 [Portugiesisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/pt) | [](https://gitlocalize.com/repo/7956/pt?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/pt/badge.svg)
-[Chinesisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/zh) | [](https://gitlocalize.com/repo/7956/nl?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/nl/badge.svg)[](https://gitlocalize.com/repo/7956/pt?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/pt/badge.svg)[](https://gitlocalize.com/repo/7956/zh?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/zh/badge.svg)
+[Chinesisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/zh) | [](https://gitlocalize.com/repo/7956/zh?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/zh/badge.svg) |
 
 ## Mitwirkende
 
