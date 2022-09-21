@@ -1,0 +1,12 @@
+locale:
+- locale/*
+
+workflow:
+- .github/workflows/*
+
+documentation:
+- README.md
+- CODE_OF_CONDUCT.md
+
+dependencies:
+- package.json
