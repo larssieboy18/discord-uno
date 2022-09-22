@@ -121,11 +121,14 @@ let hello = {
 // milestone: 1.0.0
 // Remove all test data, i.e. the one listed in the first 112 lines of this file, from `all.js`.
 // e.g. replace `hello` with `event` and remove the `hello` variable.
+// replace `eventt` with `event` and remove the `eventt` variable.
 
 // // get message info
 // let { message } = hello
 
-if (hello.data.custom_id.includes(`accept-uno-invite`)) {
+let {eventt} = hello
+
+if (eventt.data.custom_id.includes(`accept-uno-invite`)) {
   return console.log(`accept-uno-invite button pressed. Separate function will handle this.`)
 }
 
