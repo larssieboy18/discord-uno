@@ -19,7 +19,7 @@ documentation:
 
 dependencies:
 - package.json
-- renovate.json
+- .github/renovate.json
 - .github/dependabot.yml
 - .github/workflows/dependency-review.yml
 
