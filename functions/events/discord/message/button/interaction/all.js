@@ -111,8 +111,6 @@ let hello = {
   }
 }
 
-let event = hello
-
 // // get event info
 // let { event } = context.params
 
@@ -122,14 +120,12 @@ let event = hello
 // assignees: larssieboy18
 // milestone: 1.0.0
 // Remove all test data, i.e. the one listed in the first 112 lines of this file, from `all.js`.
+// e.g. replace `hello` with `event` and remove the `hello` variable.
 
 // get message info
-let { message } = event
+let { message } = hello
 
-// get button info
-let { components } = message.components
-
-if (components.includes(`accept-uno-invite`)) {
+if (hello.data.custom_id.includes(`accept-uno-invite`)) {
   return console.log(`accept-uno-invite button pressed. Separate function will handle this.`)
 }
 
