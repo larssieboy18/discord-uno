@@ -33,6 +33,9 @@
       "subtype": {
         "command": "tarot"
       }
+    },
+    "functions/events/discord/message/button/interaction/all.js": {
+      "name": "discord.message.button.interaction.all"
     }
   },
   "env": [
