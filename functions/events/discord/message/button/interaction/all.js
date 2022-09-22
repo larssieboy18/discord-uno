@@ -126,9 +126,21 @@ let hello = {
 // // get message info
 // let { message } = hello
 
+const responses = require('../../../../../../helpers/interactions/responses.js');
+const kv = require('../../../../../../helpers/kv/functions.js');
+
 let eventt = hello.event
 
-if (eventt.data.custom_id == `accept-uno-invite`) {
-  return console.log(`accept-uno-invite button pressed. Separate function will handle this.`)
-}
+button_id = eventt.data.custom_id
 
+// do a thing depending on the button that was pressed
+switch (button_id) {
+  case `deny-uno-invite`:
+    return console.log(`deny-uno-invite button pressed. Separate function (functions/events/discord/message/button/interaction.js) will handle this.`)
+    break
+  case `cards`: // show the cards of the player that pressed the button, but only to the player that pressed the button
+    let player_id = eventt.user.id
+  default: // if an unknown button was pressed, do nothing
+    return console.error(`Unknown button pressed. Not sure what to do... If this keep happening, please report it to https://github.com/larssieboy18/discord-uno/issues`)
+    break
+}
