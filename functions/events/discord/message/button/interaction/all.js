@@ -126,7 +126,7 @@ let hello = {
 // // get message info
 // let { message } = hello
 
-let {eventt} = hello
+let eventt = hello.event
 
 if (eventt.data.custom_id.includes(`accept-uno-invite`)) {
   return console.log(`accept-uno-invite button pressed. Separate function will handle this.`)
