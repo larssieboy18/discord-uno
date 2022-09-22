@@ -102,7 +102,7 @@ let hello = {
     "locale": "en-GB",
     "id": "1022576307709677710",
     "data": {
-      "custom_id": "deny-uno-invite",
+      "custom_id": "cards",
       "component_type": 2
     },
     "channel_id": "984497481821847602",
@@ -123,7 +123,12 @@ let hello = {
 // let { message } = hello
 
 const responses = require('../../../../../../helpers/interactions/responses.js');
+const followup = require('../../../../../../helpers/interactions/followup.js');
 const kv = require('../../../../../../helpers/kv/functions.js');
+const { getCardByName, getCardByColorValue } = require('../../../../../../helpers/others/functions.js');
+
+// ACK the interaction
+await followup.ephemeral(eventt.token)
 
 let eventt = hello.event
 let gameChannel = eventt.channel_id
@@ -140,7 +145,25 @@ switch (button_id) {
     break
   case `cards`: // show the cards of the player that pressed the button, but only to the player that pressed the button
     let player_id = eventt.user.id
-    
+    let playerNumber = game.players.findIndex(player => player.id === player_id)
+    let player = game.players[playerNumber]
+    let cards = game.playerHands[playerNumber]
+    let cardNames = []
+    for (let i = 0; i < cards.length; i++) {
+      let card = cards[i]
+      let cardName = getCardByColorValue(card.color, card.value)
+      cardNames.push(cardName)
+    }
+    let cardNamesString = cardNames.join(`, `)
+    let cardNamesString2 = cardNamesString.replace(/, ([^,]*)$/, ' and $1')
+    await followup.update(eventt.token, ``, [{
+      title: `Your cards`,
+      description: cardNamesString2,
+      color: 3092790
+    }])
+    break
+  case `draw`: // draw a card
+    break
   default: // if an unknown button was pressed, do nothing
     return console.error(`Unknown button pressed. Not sure what to do... If this keep happening, please report it to https://github.com/larssieboy18/discord-uno/issues`)
     break
