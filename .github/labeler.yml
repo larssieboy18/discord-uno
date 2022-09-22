@@ -1,8 +1,8 @@
 locale:
-- locale/*
+- locale/**/*
 
 workflow:
-- .github/workflows/*
+- .github/workflows/**/*
 - .github/close-label.yml
 - .github/labeler.yml
 - .github/dependabot.yml
@@ -24,7 +24,7 @@ dependencies:
 - .github/workflows/dependency-review.yml
 
 image:
-- www/*
+- www/**/*
 
 wontfix:
 - payloads.json
