@@ -1,7 +1,7 @@
 on:
   pull_request:
-    types: [opened]
-name: Pull Request
+    types: [opened, reopened]
+name: Auto Assign Pull Request
 jobs:
   assignAuthor:
     name: Assign author to PR
