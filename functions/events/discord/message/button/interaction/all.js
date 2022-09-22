@@ -115,10 +115,6 @@ let hello = {
 // let { event } = context.params
 
 // TODO Remove test data from `all.js`
-// label: development
-// lines: 1,117
-// assignees: larssieboy18
-// milestone: 1.0.0
 // Remove all test data, i.e. the one listed in the first 112 lines of this file, from `all.js`.
 // e.g. replace `hello` with `event` and remove the `hello` variable.
 // replace `eventt` with `event` and remove the `eventt` variable.
