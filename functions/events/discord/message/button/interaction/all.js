@@ -126,6 +126,10 @@ const responses = require('../../../../../../helpers/interactions/responses.js')
 const kv = require('../../../../../../helpers/kv/functions.js');
 
 let eventt = hello.event
+let gameChannel = eventt.channel_id
+let guild = eventt.guild_id
+
+let game = await kv.get(`UNO-${guild_id}-${gameChannel}`)
 
 button_id = eventt.data.custom_id
 
@@ -136,6 +140,7 @@ switch (button_id) {
     break
   case `cards`: // show the cards of the player that pressed the button, but only to the player that pressed the button
     let player_id = eventt.user.id
+    
   default: // if an unknown button was pressed, do nothing
     return console.error(`Unknown button pressed. Not sure what to do... If this keep happening, please report it to https://github.com/larssieboy18/discord-uno/issues`)
     break
