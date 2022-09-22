@@ -30,5 +30,5 @@ wontfix:
 - payloads.json
 
 code:
-- functions/*
+- functions/**/*
 - helpers/*
