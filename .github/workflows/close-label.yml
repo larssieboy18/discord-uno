@@ -6,6 +6,6 @@ jobs:
   close-label:
     runs-on: ubuntu-latest
     steps:
-    - uses: larssieboy18/close-label@0.0.5
+    - uses: larssieboy18/close-label@0.0.6
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
