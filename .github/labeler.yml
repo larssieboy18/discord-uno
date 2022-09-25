@@ -3,7 +3,6 @@ locale:
 
 workflow:
 - .github/workflows/**/*
-- .github/close-label.yml
 - .github/labeler.yml
 
 documentation:
