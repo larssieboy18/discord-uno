@@ -1,11 +1,9 @@
 locale:
-- locale/*
+- locale/**/*
 
 workflow:
-- .github/workflows/*
-- .github/close-label.yml
+- .github/workflows/**/*
 - .github/labeler.yml
-- .github/dependabot.yml
 
 documentation:
 - .all-contributorsrc
@@ -19,16 +17,15 @@ documentation:
 
 dependencies:
 - package.json
-- renovate.json
-- .github/dependabot.yml
+- .github/renovate.json
 - .github/workflows/dependency-review.yml
 
 image:
-- www/*
+- www/**/*
 
 wontfix:
 - payloads.json
 
 code:
-- functions/*
+- functions/**/*
 - helpers/*

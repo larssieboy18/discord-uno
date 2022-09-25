@@ -1,18 +1,15 @@
-# https://github.com/Noshup/todo-to-issue-action
-
-    name: "Automatically mark to-do's"
-    on: ["push"]
-    jobs:
-      todo:
-        runs-on: "ubuntu-latest"
-        steps:
-          - uses: "actions/checkout@master"
-          - name: "Comment to Issue"
-            uses: "Noshup/todo-to-issue-action@master"
-            id: "todo"
-            with:
-              AUTO_ASSIGN: true
-
-# Possible alternatives:
-# "Base version": https://github.com/alstr/todo-to-issue-action
-# https://github.com/dtinth/todo-actions
+name: TODO workflow
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Run tdg-github-action
+      uses: ribtoks/tdg-github-action@master
+      with:
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO: ${{ github.repository }}
+        SHA: ${{ github.sha }}
+        REF: ${{ github.ref }}
+        COMMENT_ON_ISSUES: true
