@@ -5,7 +5,6 @@ workflow:
 - .github/workflows/**/*
 - .github/close-label.yml
 - .github/labeler.yml
-- .github/dependabot.yml
 
 documentation:
 - .all-contributorsrc
@@ -20,7 +19,6 @@ documentation:
 dependencies:
 - package.json
 - .github/renovate.json
-- .github/dependabot.yml
 - .github/workflows/dependency-review.yml
 
 image:
