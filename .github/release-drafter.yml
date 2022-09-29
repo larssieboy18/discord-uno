@@ -3,9 +3,10 @@ tag-template: 'v$RESOLVED_VERSION'
 template: |
   # Changelog
   $CHANGES
-  
-  See details of [all code changes](https://github.com/github/automatic-contrib-prs/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION) since previous release 
-  
+
+  ## All changes
+  See details of [all code changes](https://github.com/github/automatic-contrib-prs/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION) since previous release
+
 categories:
   - title: '💻 Initial development (v1.0.0)'
     labels:
