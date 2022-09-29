@@ -1,0 +1,40 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+template: |
+  # Changelog
+  $CHANGES
+  
+  See details of [all code changes](https://github.com/github/automatic-contrib-prs/compare/$PREVIOUS_TAG...v$RESOLVED_VERSION) since previous release 
+  
+categories:
+  - title: '💻 Initial development (v1.0.0)'
+    labels:
+      - 'development'
+  - title: '🚀 Features'
+    labels:
+      - 'enhancement'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'bug'
+  - title: '🧰 Maintenance'
+    labels:
+      - 'documentation'
+      - 'dependencies'
+      - 'workflow'
+  - title: '🚩 Language'
+    labels:
+      - 'locale'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+version-resolver:
+  major:
+    labels:
+      - 'type: breaking'
+  minor:
+    labels:
+      - 'type: enhancement'
+  patch:
+    labels:
+      - 'type: bug'
+      - 'type: maintenance'
+      - 'type: documentation'
+  default: patch
