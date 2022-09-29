@@ -28,3 +28,8 @@ jobs:
         uses: "pascalgn/automerge-action@v0.15.3"
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: automerge, !wip
+          MERGE_REMOVE_LABELS: ""
+          MERGE_DELETE_BRANCH: true
+          UPDATE_RETRIES: 5
+          UPDATE_RETRY_SLEEP: 15000
