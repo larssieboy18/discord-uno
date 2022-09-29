@@ -8,7 +8,7 @@
 
 [](https://open.autocode.com/)<img src="https://open.autocode.com/static/images/open.svg?" width="192">
 
-[](https://www.codefactor.io/repository/github/larssieboy18/discord-uno)![CodeFactor](https://www.codefactor.io/repository/github/larssieboy18/discord-uno/badge) [](https://deepscan.io/dashboard#view=project&tid=18640&pid=22229&bid=653932)![DeepScan-Klasse](https://deepscan.io/api/teams/18640/projects/22229/branches/653932/badge/grade.svg) [](https://www.codacy.com/gh/larssieboy18/discord-uno/dashboard?utm_source=github.com&utm_medium=referral&utm_content=larssieboy18/discord-uno&utm_campaign=Badge_Grade)![Codacy-Abzeichen](https://app.codacy.com/project/badge/Grade/ac2f952738c14ea9b587a38d6d963a1f) [](https://sonarcloud.io/summary/new_code?id=larssieboy18_discord-uno)![Zeilen von Code](https://sonarcloud.io/api/project_badges/measure?project=larssieboy18_discord-uno&metric=ncloc)
+[](https://www.codefactor.io/repository/github/larssieboy18/discord-uno)![CodeFactor](https://www.codefactor.io/repository/github/larssieboy18/discord-uno/badge) [](https://deepscan.io/dashboard#view=project&tid=18640&pid=22229&bid=653932)![DeepScan-Klasse](https://deepscan.io/api/teams/18640/projects/22229/branches/653932/badge/grade.svg) [](https://sonarcloud.io/summary/new_code?id=larssieboy18_discord-uno)![Codacy-Abzeichen](https://sonarcloud.io/api/project_badges/measure?project=larssieboy18_discord-uno&metric=ncloc)
 
 ## Andere Sprachen
 
@@ -23,7 +23,7 @@ Sprache | Übersetzt
 [Französisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/fr) | [](https://gitlocalize.com/repo/7956/fr?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/fr/badge.svg)
 [Niederländisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/nl) | [](https://gitlocalize.com/repo/7956/nl?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/nl/badge.svg)
 [Portugiesisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/pt) | [](https://gitlocalize.com/repo/7956/pt?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/pt/badge.svg)
-[Chinesisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/zh) | [](https://gitlocalize.com/repo/7956/zh?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/zh/badge.svg) |
+[Chinesisch](https://github.com/larssieboy18/discord-uno/blob/main/locale/zh) | [](https://gitlocalize.com/repo/7956/zh?utm_source=badge)![gitlokalisiert](https://gitlocalize.com/repo/7956/zh/badge.svg)
 
 ## Mitwirkende
 
