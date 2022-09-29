@@ -1,5 +1,9 @@
 # These owners will be the default owners for everything in
-# the repo. Unless a later match takes precedence,
-# @global-owner1 and @global-owner2 will be requested for
-# review when someone opens a pull request.
-*       @larssieboy18
+# the repo, unless a later match takes precedence.
+* @larssieboy18
+
+# No CODEOWNER is needed for the not default languages located in `/locale`
+/locale/
+
+# But a CODEOWNER is necessary for the default language
+/locale/en/ @larssieboy18
