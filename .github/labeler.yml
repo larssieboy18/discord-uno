@@ -29,3 +29,6 @@ wontfix:
 code:
 - functions/**/*
 - helpers/*
+
+automerge: # Translations are automatically merged if they have been approved inside Gitlocalize
+- locale/**/*
