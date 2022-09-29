@@ -1,77 +1,80 @@
 # Gedragscode bijdragers
 
-## Our Pledge
+## Onze belofte
 
-We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+Wij als leden, bijdragers en leiders beloven deelname aan onze gemeenschap een ervaring te maken zonder intimidatie voor iedereen, ongeacht leeftijd, lichaamsgrootte, zichtbare of onzichtbare handicap, etniciteit, geslachtskenmerken, genderidentiteit en -expressie, ervaringsniveau, opleiding , sociaaleconomische status, nationaliteit, uiterlijk, ras, religie of seksuele identiteit en geaardheid.
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+We beloven te handelen en met elkaar om te gaan op manieren die bijdragen aan een open, gastvrije, diverse, inclusieve en gezonde gemeenschap.
 
-## Our Standards
+## Onze normen
 
-Examples of behavior that contributes to a positive environment for our community include:
+Voorbeelden van gedrag dat bijdraagt aan een positieve omgeving voor onze gemeenschap zijn:
 
-- Demonstrating empathy and kindness toward other people
-- Being respectful of differing opinions, viewpoints, and experiences
-- Giving and gracefully accepting constructive feedback
-- Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-- Focusing on what is best not just for us as individuals, but for the overall community
+- Empathie en vriendelijkheid tonen voor andere mensen
+- Respect hebben voor verschillende meningen, gezichtspunten en ervaringen
+- Constructieve feedback geven en gracieus accepteren
+- Verantwoordelijkheid aanvaarden en onze excuses aanbieden aan degenen die door onze fouten zijn getroffen, en leren van de ervaring
+- Focussen op wat het beste is, niet alleen voor ons als individuen, maar voor de hele gemeenschap
 
-Examples of unacceptable behavior include:
+Voorbeelden van onaanvaardbaar gedrag zijn:
 
-- The use of sexualized language or imagery, and sexual attention or advances of any kind
-- Trolling, insulting or derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information, such as a physical or email address, without their explicit permission
-- Other conduct which could reasonably be considered inappropriate in a professional setting
+- Het gebruik van geseksualiseerde taal of beelden, en seksuele aandacht of avances van welke aard dan ook
+- Trollen, beledigende of denigrerende opmerkingen en persoonlijke of politieke aanvallen
+- Openbare of particuliere intimidatie
+- Het publiceren van privégegevens van anderen, zoals een fysiek of e-mailadres, zonder hun uitdrukkelijke toestemming
+- Ander gedrag dat redelijkerwijs als ongepast kan worden beschouwd in een professionele omgeving
 
-## Enforcement Responsibilities
+## Handhavingsverantwoordelijkheden
 
-Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+Gemeenschapsleiders zijn verantwoordelijk voor het verduidelijken en handhaven van onze normen voor acceptabel gedrag en zullen passende en eerlijke corrigerende maatregelen nemen als reactie op elk gedrag dat zij ongepast, bedreigend, beledigend of schadelijk achten.
 
-Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+Leidinggevenden van de gemeenschap hebben het recht en de verantwoordelijkheid om opmerkingen, toezeggingen, code, wiki-bewerkingen, problemen en andere bijdragen die niet in overeenstemming zijn met deze Gedragscode te verwijderen, bewerken of af te wijzen, en zullen, indien van toepassing, redenen voor moderatiebeslissingen meedelen.
 
-## Scope
+## Domein
 
-This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces. Examples of representing our community include using an official e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+Deze gedragscode is van toepassing in alle openbare ruimtes en is ook van toepassing wanneer een persoon de gemeenschap officieel vertegenwoordigt in de openbare ruimte. Voorbeelden van het vertegenwoordigen van onze community zijn onder meer het gebruik van een officieel e-mailadres, posten via een officieel social media-account of optreden als een aangewezen vertegenwoordiger bij een online of offline evenement.
 
-## Enforcement
+## Handhaving
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community leaders responsible for enforcement to `Lars.#0018` on Discord. All complaints will be reviewed and investigated promptly and fairly.
+Gevallen van beledigend, intimiderend of anderszins onaanvaardbaar gedrag kunnen worden gemeld aan de gemeenschapsleiders die verantwoordelijk zijn voor handhaving aan `Lars.#0018` op Discord. Alle klachten zullen snel en eerlijk worden beoordeeld en onderzocht.
 
-All community leaders are obligated to respect the privacy and security of the reporter of any incident.
+Alle leiders van de gemeenschap zijn verplicht om de privacy en veiligheid van de melder van elk incident te respecteren.
 
-## Enforcement Guidelines
+## Handhavingsrichtlijnen
 
-Community leaders will follow these Community Impact Guidelines in determining the consequences for any action they deem in violation of this Code of Conduct:
+Leiders van de gemeenschap zullen deze richtlijnen voor de impact van de gemeenschap volgen bij het bepalen van de gevolgen voor elke actie die zij in strijd achten met deze gedragscode:
 
-### 1. Correction
+### 1. Correctie:
 
-**Community Impact**: Use of inappropriate language or other behavior deemed unprofessional or unwelcome in the community.
+**Impact op de gemeenschap** : gebruik van ongepast taalgebruik of ander gedrag dat als onprofessioneel of ongewenst wordt beschouwd in de gemeenschap.
 
-**Consequence**: A private, written warning from community leaders, providing clarity around the nature of the violation and an explanation of why the behavior was inappropriate. A public apology may be requested.
+**Gevolg** : een persoonlijke, schriftelijke waarschuwing van gemeenschapsleiders, die duidelijkheid verschaft over de aard van de overtreding en een verklaring waarom het gedrag ongepast was. Er kan om een openbare verontschuldiging worden verzocht.
 
-### 2. Warning
+### 2. Waarschuwing
 
-**Community Impact**: A violation through a single incident or series of actions.
+**Impact op de gemeenschap** : een overtreding door een enkel incident of een reeks acties.
 
-**Consequence**: A warning with consequences for continued behavior. No interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, for a specified period of time. This includes avoiding interactions in community spaces as well as external channels like social media. Violating these terms may lead to a temporary or permanent ban.
+**Gevolg** : Een waarschuwing met gevolgen voor blijvend gedrag. Geen interactie met de betrokken personen, inclusief ongevraagde interactie met degenen die de Gedragscode handhaven, gedurende een bepaalde periode. Dit omvat het vermijden van interacties in gemeenschappelijke ruimtes en externe kanalen zoals sociale media. Het overtreden van deze voorwaarden kan leiden tot een tijdelijk of permanent verbod.
 
-### 3. Temporary Ban
+### 3. Tijdelijk verbod
 
-**Community Impact**: A serious violation of community standards, including sustained inappropriate behavior.
+**Gevolgen voor de gemeenschap** : een ernstige schending van de normen van de gemeenschap, inclusief aanhoudend ongepast gedrag.
 
-**Consequence**: A temporary ban from any sort of interaction or public communication with the community for a specified period of time. No public or private interaction with the people involved, including unsolicited interaction with those enforcing the Code of Conduct, is allowed during this period. Violating these terms may lead to a permanent ban.
+**Gevolg** : een tijdelijk verbod op elke vorm van interactie of openbare communicatie met de gemeenschap voor een bepaalde periode. Tijdens deze periode is geen openbare of privé-interactie met de betrokken personen, inclusief ongevraagde interactie met degenen die de Gedragscode handhaven, toegestaan. Het overtreden van deze voorwaarden kan leiden tot een permanent verbod.
 
-### 4. Permanent Ban
+### 4. Permanente ban
 
-**Community Impact**: Demonstrating a pattern of violation of community standards, including sustained inappropriate behavior, harassment of an individual, or aggression toward or disparagement of classes of individuals.
+**Gevolgen voor de gemeenschap** : Aantonen van een patroon van schending van gemeenschapsnormen, waaronder aanhoudend ongepast gedrag, intimidatie van een persoon, of agressie jegens of minachting van klassen van individuen.
 
-**Consequence**: A permanent ban from any sort of public interaction within the community.
+**Gevolg** : een permanent verbod op elke vorm van openbare interactie binnen de gemeenschap.
 
-## Attribution
+## Naamsvermelding
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+Deze gedragscode is een bewerking van het [convenant voor bijdragers] , versie 2.0, beschikbaar op https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
 
-Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
+Richtlijnen voor gemeenschapsimpact zijn geïnspireerd op [de handhavingsladder van Mozilla's gedragscode](https://github.com/mozilla/diversity) .
 
-For answers to common questions about this code of conduct, see the FAQ at https://www.contributor-covenant.org/faq. Translations are available at https://www.contributor-covenant.org/translations.
+Voor antwoorden op veelgestelde vragen over deze gedragscode, zie de FAQ op https://www.contributor-covenant.org/faq. Vertalingen zijn beschikbaar op https://www.contributor-covenant.org/translations.
+
+
+[convenant voor bijdragers]: https://www.contributor-covenant.org
