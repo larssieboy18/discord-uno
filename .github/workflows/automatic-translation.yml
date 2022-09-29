@@ -1,10 +1,10 @@
 # https://github.com/marketplace/actions/issues-translator
 
 name: 'issue-translator'
-on: 
-  issue_comment: 
+on:
+  issue_comment:
     types: [created]
-  issues: 
+  issues:
     types: [opened]
 
 jobs:
@@ -16,5 +16,5 @@ jobs:
           IS_MODIFY_TITLE: false
           # not require, default false, . Decide whether to modify the issue title
           # if true, the robot account @Issues-translate-bot must have modification permissions, invite @Issues-translate-bot to your project or use your custom bot.
-          CUSTOM_BOT_NOTE: Bot detected the issue body's language is not English, translate it automatically. 
+          CUSTOM_BOT_NOTE: Bot detected the issue body's language is not English, translate it automatically.
           # not require. Customize the translation robot prefix message.
