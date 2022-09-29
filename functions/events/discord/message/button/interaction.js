@@ -137,7 +137,7 @@ if (!game) {
   return console.error(`There was an error getting the game data.` + `\n` + `Guild ID: ${guild_id}` + `\n` + `Channel ID: ${gameChannel}` + `\n` + `Message ID: ${playerlistMessageID}`)
 } 
 
-let startGame = await http.post(`https://${context.service.environment}--${context.service.path[1]}.${context.service.path[0]}.autocode.gg/events/discord/uno/start/`, '', {auth: context.service.hash}, {event: context.params.event, game: game, allAccepted: allAccepted,})
+let startGame = await http.post(`https://${context.service.path[0]}.autocode.dev/${context.service.path[1]}@${context.service.environment}/event/discord/uno/start/`, '', {auth: context.service.hash}, {event: context.params.event, game: game, allAccepted: allAccepted,})
 console.log(startGame.data);
 
 // if startGame is true, an error occured while starting the game. If it's false, the game started successfully.
