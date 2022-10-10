@@ -1,0 +1,18 @@
+# https://github.com/loxygenK/taskonfirm
+
+
+# TODO: Add a checkbox to the PR template
+# TODO: see if there is a more up to date version of this action
+
+name: PR Checkboxes
+
+on:
+  pull_request:
+    types: [ opened, edited ]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: loxygenK/taskonfirm@v1.0.0
