@@ -99,6 +99,6 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/github
 
 ## Attribution
 
-This Contribution guide is adapted from a [template provided by Github](https://github.com/), available [here](https://github.com/github/automatic-contrib-prs/blob/main/CONTRIBUTING-template.md) (Copyright (c) 2021 GitHub).
+This Contribution guide is adapted from a template provided by [Github](https://github.com/), available [here](https://github.com/github/automatic-contrib-prs/blob/main/CONTRIBUTING-template.md) (Copyright © 2021 GitHub).
 
 Any and all changes made to this Contribution guide are the work of the contributors of the [discord-uno](https://github.com/larssieboy18/discord-uno) repo and those modification therefore fall under the [license](LICENSE) that is applicable to this repo.
