@@ -12,7 +12,7 @@ on:
 
 jobs:
   eslint:
-    if: github.event.pull_request.user.login != 'renovate'
+    if: github.event.pull_request.user.login != 'renovate[bot]'
     runs-on: ubuntu-latest
 
     steps:
