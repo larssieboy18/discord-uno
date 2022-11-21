@@ -1,4 +1,9 @@
 # discord-uno
+
+# WARNING
+Due to changes that happened in Autocode, I will not be developing this project any further. Feel free to fork any part of it and use it in your own projects. I might make a "normal" Discord bot that uses `Discord.js`, but not certain yet. Hopefully this project can help someone develop something cool!
+
+## Badges
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
