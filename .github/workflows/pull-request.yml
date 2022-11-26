@@ -1,0 +1,61 @@
+# Dependency Review Action
+#
+# This Action will scan dependency manifest files that change as part of a Pull Request, surfacing known-vulnerable versions of the packages declared or updated in the PR. Once installed, if the workflow run is marked as required, PRs introducing known-vulnerable packages will be blocked from merging.
+#
+# Source repository: https://github.com/actions/dependency-review-action
+# Public documentation: https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement
+
+# |=========================== Datree Policy Check ===================================|
+# | This workflow will verify that all committed config files in the PR are valid.    |
+# | If one of the config files is happened to be a K8s config file (manifest),        |
+# | It will also automatically be tested for schema validation and misconfigurations. |
+# | For more info visit: https://github.com/marketplace/datree                        |
+# |===================================================================================|
+
+name: "Pull Request Workflow"
+on: [pull_request]
+
+permissions:
+  contents: write
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v3
+      - name: "Dependency Review"
+        uses: actions/dependency-review-action@v2
+
+  configs-validation:
+    runs-on: ubuntu-latest
+    env:
+      DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v29.0.9
+        with:
+          files: |
+            *.yaml
+            *.yml
+      - name: List all changed files
+        run: echo ${{ steps.changed-files.outputs.all_changed_files }}
+
+      - name: Install Datree's CLI
+        if: steps.changed-files.outputs.any_changed == 'true'
+        run: curl https://get.datree.io | /bin/bash -s
+
+      - name: Datree validate config files
+        if: steps.changed-files.outputs.any_changed == 'true'
+        uses: datreeio/action-datree@main
+        with:
+          path: ${{ steps.changed-files.outputs.all_changed_files }}
+          cliArguments: --only-k8s-files
+          isHelmChart: false
+          isKustomization: false
